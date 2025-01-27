@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Coding on Lagging Indicators</title>
+    <link>http://localhost:1313/tags/coding/</link>
+    <description>Recent content in Coding on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2 years of notes from building an app I didn&#39;t release</title>
+      <link>http://localhost:1313/posts/2-years-of-notes-from-building-an-app-i-didnt-release/</link>
+      <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2-years-of-notes-from-building-an-app-i-didnt-release/</guid>
+      <description>&lt;p&gt;Close to 2 years ago, I had an idea for a mobile application that allowed users to store, submit, and manage tax reimbursements in foreign countries. For 2 years ago, I on and off worked on this idea and had a functioning version on my phone - and for nearly all that time, I never felt like the application was ready to release to potential users - and it doesn&amp;rsquo;t look like I&amp;rsquo;ll ever get it there.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Play 8 Red Squares</title>
+      <link>http://localhost:1313/posts/play-8-red-squares/</link>
+      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/play-8-red-squares/</guid>
+      <description>&lt;p&gt;I re-deployed &lt;a href=&#34;https://leppekja.github.io/8redsquares/&#34;&gt;8 Red Squares&lt;/a&gt;, a site that allows you to play through the &lt;a href=&#34;https://en.wikipedia.org/wiki/Eight_queens_puzzle&#34;&gt;8 Queens Puzzle&lt;/a&gt; on different sized boards.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://laggingindicators.blog/wp-content/uploads/2024/09/image-5.png?w=644&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Future enhancements I&amp;rsquo;d like to add are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Timer (for each segment), and total running time until the users solves n=8.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Better mobile support (board size 9 and 10 don&amp;rsquo;t handle small screens well).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Foundational solutions checklist, e.g., if a user wants to find all possible arrangements (excluding symmetries and rotations).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Daily SNAP News Aggregator launched</title>
+      <link>http://localhost:1313/posts/daily-snap-news-aggregator-launched/</link>
+      <pubDate>Tue, 11 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/daily-snap-news-aggregator-launched/</guid>
+      <description>&lt;p&gt;Site is &lt;a href=&#34;https://leppekja.github.io/snap_news/&#34;&gt;accessible here&lt;/a&gt;, and the accompanying GitHub repository can be accessed through that site as well. It is based on a Google Alerts RSS feed, built every ~6 hours with Jekyll and GitHub Actions.&lt;/p&gt;
+&lt;p&gt;Monthly commentary will be included on that site in the future. Immediate next steps are to add in more news aggregators as sources, to try and get articles that are missed. I would like to integrate Google Scholar as well, but it does not appear they offer an RSS feed or any simple method. Article display filtering is currently done on a keyword basis, which has been working fine, but would like to move to a classifier model.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Joint &amp;amp; conditional probabilities with pd.crosstab</title>
+      <link>http://localhost:1313/posts/joint-conditional-probabilities-with-pd-crosstab/</link>
+      <pubDate>Thu, 02 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/joint-conditional-probabilities-with-pd-crosstab/</guid>
+      <description>&lt;p&gt;&lt;code&gt;pd.crosstab&lt;/code&gt; is one of those built-in functions in the Pandas API that I forget about routinely. I instinctively reached for &lt;code&gt;df.groupby(&#39;x&#39;)[&#39;y&#39;].count().unstack()&lt;/code&gt;, but when I wanted to normalize the values, it takes &lt;a href=&#34;https://stackoverflow.com/questions/37818063/how-to-calculate-conditional-probability-of-values-in-dataframe-pandas-python&#34;&gt;more and more steps&lt;/a&gt; to get where I wanted.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://lisds.github.io/textbook/useful-pandas/crosstab.html&#34;&gt;This was a nice straightforward overview&lt;/a&gt; of the &lt;code&gt;pd.crosstab&lt;/code&gt; function. To document for myself, below, create a sample correlated &lt;code&gt;DataFrame&lt;/code&gt; with integer columns &lt;code&gt;ActiveUsers&lt;/code&gt; and &lt;code&gt;CompletedProfile&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; pd
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; np
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# following code from Github Copilot&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;seed(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1000&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Number of samples&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;p &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Probability of True in the first column&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rho &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.8&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Correlation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;col1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;choice([&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;], size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;n, p&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[p, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;p])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;col2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;where(col1, np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;choice([&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;], size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;n, p&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[rho, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;rho]), 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;random&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;choice([&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;], size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;n, p&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;rho, rho]))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame({&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ActiveUsers&amp;#39;&lt;/span&gt;: col1, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;CompletedProfile&amp;#39;&lt;/span&gt;: col2})
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;figure&gt;
+&lt;table class=&#34;has-fixed-layout&#34;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;ActiveUsers&lt;/td&gt;&lt;td&gt;CompletedProfile&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;0&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;...&lt;/td&gt;&lt;td&gt;...&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;figcaption&gt;
+&lt;p&gt;Sample of the constructed DataFrame&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Identifying outbound IP addresses of a Azure Function</title>
+      <link>http://localhost:1313/posts/identifying-outbound-ip-addresses-of-a-azure-function/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/identifying-outbound-ip-addresses-of-a-azure-function/</guid>
+      <description>&lt;p&gt;Here is &lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-functions/ip-addresses?tabs=portal&#34;&gt;Microsoft&amp;rsquo;s documentation page on the topic&lt;/a&gt;. The only reason I am documenting this is because the Azure Resource Explorer failed to load consistently across devices for me. Some tutorials I found, like &lt;a href=&#34;https://rubberduckdev.com/app-outbound-ip/&#34;&gt;this one&lt;/a&gt;, seem to be outdated and the outbound IP addresses weren&amp;rsquo;t listed in any Properties menu in the Function App in the Azure Portal. The Azure CLI method was what worked for me:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;az functionapp show --resource-group &amp;lt;GROUP_NAME&amp;gt; --name &amp;lt;APP_NAME&amp;gt; --query outboundIpAddresses --output tsv
+az functionapp show --resource-group &amp;lt;GROUP_NAME&amp;gt; --name &amp;lt;APP_NAME&amp;gt; --query possibleOutboundIpAddresses --output tsv
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I wanted this as I was hoping to whitelist the IP addresses in the database firewall to allow for scheduling some SQL scripts to run daily. The issue with this is the following, copied from the above linked Microsoft documentation: &amp;ldquo;because of autoscaling behaviors, the outbound IP can change at any time when running on a &lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-functions/consumption-plan&#34;&gt;Consumption plan&lt;/a&gt; or in a &lt;a href=&#34;https://learn.microsoft.com/en-us/azure/azure-functions/functions-premium-plan&#34;&gt;Premium plan&lt;/a&gt;.&amp;rdquo; While at least a few people say &lt;a href=&#34;https://stackoverflow.com/questions/49109310/how-to-allow-azure-function-to-access-database-hosted-on-azure-vm&#34;&gt;whitelist these IPs anyway&lt;/a&gt;, the recommended course of action is to set up a virtual network within Azure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using Observable Framework on Windows WSL and quickly deploying to GitHub Pages</title>
+      <link>http://localhost:1313/posts/using-observable-framework-on-windows-wsl-and-quickly-deploying-to-github-pages/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/using-observable-framework-on-windows-wsl-and-quickly-deploying-to-github-pages/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve got &lt;a href=&#34;https://github.com/observablehq/framework&#34;&gt;the framework&lt;/a&gt; installed, and just want to deploy the static pages, &lt;a href=&#34;#deploying&#34;&gt;skip to below&lt;/a&gt;. Note - my first time doing this, but it works. You can always deploy directly to Observable.&lt;/p&gt;
+&lt;p&gt;Observable Framework is &lt;a href=&#34;https://github.com/observablehq/framework/issues/90&#34;&gt;not supported on Windows&lt;/a&gt;, according to an issue in their GitHub. (Update Mar 2024: Observable Framework is now supported on Windows). To use it, you need to use WSL.&lt;/p&gt;
+&lt;p&gt;If you want to use it through WSL, then the following still applies. Fortunately, it is very easy to do. Steps I had to take to do this:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Monday links</title>
+      <link>http://localhost:1313/posts/monday-links/</link>
+      <pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/monday-links/</guid>
+      <description>&lt;p&gt;- Whenever I do analyses I am nervous about being wrong, but using Excel&amp;rsquo;s &lt;a href=&#34;https://retractionwatch.com/2024/02/05/no-data-no-problem-undisclosed-tinkering-in-excel-behind-economics-paper/&#34;&gt;autofill function to impute data&lt;/a&gt; would have definitely been on my &amp;ldquo;this is not correct to do,&amp;rdquo; at the very least.&lt;/p&gt;
+&lt;p&gt;- Nice &lt;a href=&#34;https://mewo2.com/notes/terrain/&#34;&gt;example of a personal project&lt;/a&gt;. Contained, clear output, and interesting to the person doing it + delightful to play with and generate maps as a person who has no use for it. It&amp;rsquo;s fun!&lt;/p&gt;
+&lt;p&gt;- Helpful and clear description of how XSS (&lt;a href=&#34;https://journal.hexmos.com/domxss/&#34;&gt;cross site scripting&lt;/a&gt;) vulnerabilities work and can be identified.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I&#39;ll be back babe no baby</title>
+      <link>http://localhost:1313/posts/ill-be-back-babe-no-baby/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ill-be-back-babe-no-baby/</guid>
+      <description>&lt;p&gt;In the past six months I&amp;rsquo;ve started to have finger, wrist, and forearm pain. I previously was using the Logitech Mx Mouse and keyboard for business. But due to the pronation of my wrists I wasn&amp;rsquo;t able to type at all without experience severe pain that would continue through the evening. so recently I&amp;rsquo;ve been using the Windows voice axis. To try and perform as much typing and as many actions on the computer as I can. This post Is entirely written using my voice. And as you can I sit I&amp;rsquo;m still having trouble making this a usable tool.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

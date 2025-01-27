@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Joint &amp;amp; conditional probabilities with pd.crosstab | Lagging Indicators</title>
+<meta name="keywords" content="analytics, coding">
+<meta name="description" content="pd.crosstab is one of those built-in functions in the Pandas API that I forget about routinely. I instinctively reached for df.groupby(&#39;x&#39;)[&#39;y&#39;].count().unstack(), but when I wanted to normalize the values, it takes more and more steps to get where I wanted.
+This was a nice straightforward overview of the pd.crosstab function. To document for myself, below, create a sample correlated DataFrame with integer columns ActiveUsers and CompletedProfile.
+import pandas as pd
+import numpy as np
+
+# following code from Github Copilot
+np.random.seed(0)
+n = 1000  # Number of samples
+p = 0.7  # Probability of True in the first column
+rho = 0.8  # Correlation
+
+col1 = np.random.choice([True, False], size=n, p=[p, 1-p])
+col2 = np.where(col1, np.random.choice([True, False], size=n, p=[rho, 1-rho]), 
+         np.random.choice([True, False], size=n, p=[1-rho, rho]))
+
+df = pd.DataFrame({&#39;ActiveUsers&#39;: col1, &#39;CompletedProfile&#39;: col2})
+
+ActiveUsersCompletedProfile0TrueTrue1FalseFalse2TrueFalse3......
+
+Sample of the constructed DataFrame">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/joint-conditional-probabilities-with-pd-crosstab/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/joint-conditional-probabilities-with-pd-crosstab/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Lagging Indicators (Alt + H)">Lagging Indicators</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives/" title="All posts">
+                    <span>All posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Joint &amp;amp; conditional probabilities with pd.crosstab
+    </h1>
+    <div class="post-meta"><span title='2024-05-02 00:00:00 +0000 UTC'>May 2, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><code>pd.crosstab</code> is one of those built-in functions in the Pandas API that I forget about routinely. I instinctively reached for <code>df.groupby('x')['y'].count().unstack()</code>, but when I wanted to normalize the values, it takes <a href="https://stackoverflow.com/questions/37818063/how-to-calculate-conditional-probability-of-values-in-dataframe-pandas-python">more and more steps</a> to get where I wanted.</p>
+<p><a href="https://lisds.github.io/textbook/useful-pandas/crosstab.html">This was a nice straightforward overview</a> of the <code>pd.crosstab</code> function. To document for myself, below, create a sample correlated <code>DataFrame</code> with integer columns <code>ActiveUsers</code> and <code>CompletedProfile</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> pandas <span style="color:#66d9ef">as</span> pd
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> numpy <span style="color:#66d9ef">as</span> np
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># following code from Github Copilot</span>
+</span></span><span style="display:flex;"><span>np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>seed(<span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>  <span style="color:#75715e"># Number of samples</span>
+</span></span><span style="display:flex;"><span>p <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.7</span>  <span style="color:#75715e"># Probability of True in the first column</span>
+</span></span><span style="display:flex;"><span>rho <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.8</span>  <span style="color:#75715e"># Correlation</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>col1 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#66d9ef">True</span>, <span style="color:#66d9ef">False</span>], size<span style="color:#f92672">=</span>n, p<span style="color:#f92672">=</span>[p, <span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>p])
+</span></span><span style="display:flex;"><span>col2 <span style="color:#f92672">=</span> np<span style="color:#f92672">.</span>where(col1, np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#66d9ef">True</span>, <span style="color:#66d9ef">False</span>], size<span style="color:#f92672">=</span>n, p<span style="color:#f92672">=</span>[rho, <span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>rho]), 
+</span></span><span style="display:flex;"><span>         np<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>choice([<span style="color:#66d9ef">True</span>, <span style="color:#66d9ef">False</span>], size<span style="color:#f92672">=</span>n, p<span style="color:#f92672">=</span>[<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span>rho, rho]))
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>df <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame({<span style="color:#e6db74">&#39;ActiveUsers&#39;</span>: col1, <span style="color:#e6db74">&#39;CompletedProfile&#39;</span>: col2})
+</span></span></code></pre></div><figure>
+<table class="has-fixed-layout"><tbody><tr><td></td><td>ActiveUsers</td><td>CompletedProfile</td></tr><tr><td>0</td><td>True</td><td>True</td></tr><tr><td>1</td><td>False</td><td>False</td></tr><tr><td>2</td><td>True</td><td>False</td></tr><tr><td>3</td><td>...</td><td>...</td></tr></tbody></table>
+<figcaption>
+<p>Sample of the constructed DataFrame</p>
+</figcaption>
+</figure>
+<p>Running <code>pd.crosstab(df['ActiveUsers'], df['CompletedProfile'])</code> gets a frequency distribution. Passing <code>normalize=True</code> adjusts the numbers of each group relative to the sum of the groups.</p>
+<p>With <code>normalize='index'</code>, we can find conditional probabilities given the row values. Given the value in the index, we can see the relative frequencies in the columns; numbers are normalized according to total values of each row. This gives us P(CompletedProfile=Y|ActiveUser=X).</p>
+<figure>
+<table class="has-fixed-layout"><tbody><tr><td>CompletedProfile</td><td>False</td><td>True</td></tr><tr><td>ActiveUsers</td><td></td><td></td></tr><tr><td>False</td><td>.797</td><td>.202</td></tr><tr><td>True</td><td>.220</td><td>.779</td></tr></tbody></table>
+<figcaption>
+<p>Result of pd.crosstab(df[&lsquo;ActiveUsers&rsquo;], df[&lsquo;CompletedProfile&rsquo;], normalize=&lsquo;index&rsquo;). Given a ActiveUser value of True, ~78% of instances are CompletedProfile=True.</p>
+</figcaption>
+</figure>
+<p>With <code>normalize='columns'</code>, the conditional probabilities are based on the columns, so we find P(ActiveUser=Y|CompletedProfile=X). Given a value in a column, what is the relative frequency of each row value.</p>
+<figure>
+<table class="has-fixed-layout"><tbody><tr><td>CompletedProfile</td><td>False</td><td>True</td></tr><tr><td>ActiveUsers</td><td></td><td></td></tr><tr><td>False</td><td>.597</td><td>.096</td></tr><tr><td>True</td><td>.402</td><td>.903</td></tr></tbody></table>
+<figcaption>
+<p>Result of pd.crosstab(df[&lsquo;ActiveUsers&rsquo;], df[&lsquo;CompletedProfile&rsquo;], normalize=&lsquo;columns&rsquo;). Given a CompletedProfile value of True, ~90% of instances are ActiveUsers=True.</p>
+</figcaption>
+</figure>
+<p>Just so I don&rsquo;t forget this:</p>
+<figure>
+<table class="has-fixed-layout"><tbody><tr><td>pd.crosstab with normalize arg</td><td>Resulting conditional probability</td></tr><tr><td>pd.crosstab(df.ColumnA, df.ColumnB, normalize='index')</td><td>P(ColumnB|ColumnA)</td></tr><tr><td>pd.crosstab(df.ColumnA, df.ColumnB, normalize='columns')</td><td>P(ColumnA|ColumnB)</td></tr></tbody></table>
+<figcaption>
+<p>Resulting conditional probabilities by normalize arg.</p>
+</figcaption>
+</figure>
+<p>Curiously, passing <code>margins=True</code> when normalizing by <code>index</code> or <code>columns</code> gives totals (normalized) for the columns or rows, respectively. The Pandas documentation doesn&rsquo;t cover this, but it is strange that the <code>margins=True</code> doesn&rsquo;t result in a totals relative to the values being normalized against.</p>
+<figure>
+<table class="has-fixed-layout"><tbody><tr><td>CompletedProfile</td><td>False</td><td>True</td><td>All</td></tr><tr><td>ActiveUsers</td><td></td><td></td><td></td></tr><tr><td>False</td><td>.597</td><td>.096</td><td>.291</td></tr><tr><td>True</td><td>.402</td><td>.903</td><td>.709</td></tr></tbody></table>
+<figcaption>
+<p>Result of pd.crosstab(df[&lsquo;ActiveUsers&rsquo;], df[&lsquo;CompletedProfile&rsquo;], margins=True, normalize=&lsquo;columns&rsquo;). Values in the All column just reflect the normalized totals relative to the entire table, as if you ran pd.crosstab(df[&lsquo;ActiveUsers&rsquo;], df[&lsquo;CompletedProfile&rsquo;], normalize=True, margins=True).</p>
+</figcaption>
+</figure>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/analytics/">Analytics</a></li>
+      <li><a href="http://localhost:1313/tags/coding/">Coding</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/april-snap-updates/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>April SNAP Updates</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/identifying-outbound-ip-addresses-of-a-azure-function/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Identifying outbound IP addresses of a Azure Function</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Lagging Indicators</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

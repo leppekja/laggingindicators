@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Using Observable Framework on Windows WSL and quickly deploying to GitHub Pages | Lagging Indicators</title>
+<meta name="keywords" content="coding, devops, git, github, linux, observable, project, tutorial, windows">
+<meta name="description" content="If you&rsquo;ve got the framework installed, and just want to deploy the static pages, skip to below. Note - my first time doing this, but it works. You can always deploy directly to Observable.
+Observable Framework is not supported on Windows, according to an issue in their GitHub. (Update Mar 2024: Observable Framework is now supported on Windows). To use it, you need to use WSL.
+If you want to use it through WSL, then the following still applies. Fortunately, it is very easy to do. Steps I had to take to do this:">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/using-observable-framework-on-windows-wsl-and-quickly-deploying-to-github-pages/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/using-observable-framework-on-windows-wsl-and-quickly-deploying-to-github-pages/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Lagging Indicators (Alt + H)">Lagging Indicators</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives/" title="All posts">
+                    <span>All posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Using Observable Framework on Windows WSL and quickly deploying to GitHub Pages
+    </h1>
+    <div class="post-meta"><span title='2024-02-16 00:00:00 +0000 UTC'>February 16, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>If you&rsquo;ve got <a href="https://github.com/observablehq/framework">the framework</a> installed, and just want to deploy the static pages, <a href="#deploying">skip to below</a>. Note - my first time doing this, but it works. You can always deploy directly to Observable.</p>
+<p>Observable Framework is <a href="https://github.com/observablehq/framework/issues/90">not supported on Windows</a>, according to an issue in their GitHub. (Update Mar 2024: Observable Framework is now supported on Windows). To use it, you need to use WSL.</p>
+<p>If you want to use it through WSL, then the following still applies. Fortunately, it is very easy to do. Steps I had to take to do this:</p>
+<p>Install <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL from Powershell as described here</a>, or in the Windows Store, download Windows Subsystem for Linux and a preferred Linux distro. It looks like the latest offering is just named Ubuntu in the Windows store.</p>
+<p><img loading="lazy" src="https://laggingindicators.blog/wp-content/uploads/2024/02/image.png?w=607"></p>
+<p><img loading="lazy" src="https://laggingindicators.blog/wp-content/uploads/2024/02/image-1.png?w=614"></p>
+<p>Once you get Ubuntu from the App Store, if you don&rsquo;t use the command line version, you need to install the application. Just click on it from your Start Menu, and a terminal will guide you through the install process, setting up a username and password.</p>
+<p>Note that you may need to enable WSL in the &ldquo;Turn Windows Features on or off&rdquo; menu (search this from the Start menu), and ensure Windows Subsystem for Linux is checked if you don&rsquo;t use the command line install.</p>
+<figure>
+<p><img loading="lazy" src="https://laggingindicators.blog/wp-content/uploads/2024/02/image-3.png?w=336"></p>
+<figcaption>
+<p>Check this box in the Turn Windows Features on or off menu</p>
+</figcaption>
+</figure>
+<p>In VSCode, you can easily open a &ldquo;Remote Window&rdquo; on the bottom left corner of the screen. See the green button below, with the &gt;&lt; signs. Clicking it will open up a menu. Note that you now have a menu at the top; just select Connect to WSL. If a error pops up saying that &ldquo;no distro is found&rdquo;, then you need to ensure that it is installed, rather than just downloaded on your computer. The Powershell install manages this for you.</p>
+<p><img loading="lazy" src="https://laggingindicators.blog/wp-content/uploads/2024/02/image-2.png?w=223"></p>
+<p><img loading="lazy" src="https://laggingindicators.blog/wp-content/uploads/2024/02/image-4.png?w=1024"></p>
+<p>Open a new terminal (View &gt; Terminal). It should show up as <code>username@computername:~$</code>.</p>
+<p>From here, install Node. Here is the <a href="https://github.com/MicrosoftDocs/windows-dev-docs/blob/docs/hub/dev-environment/javascript/nodejs-on-wsl.md">Windows Dev guide</a>. Only one note: a <code>Could not resolve host: raw.githubusercontent.com</code> error may appear if you are connected to a VPN.</p>
+<p><img loading="lazy" src="https://laggingindicators.blog/wp-content/uploads/2024/02/image-5.png?w=658"></p>
+<p>Once you can run <code>nvm ls</code> and see the above, you can install the <a href="https://observablehq.com/framework/getting-started">Observable Framework library following the Get Started documentation</a>.</p>
+<p>You can open the WSL folders in the file explorer of VS Code, as well. If you enabled a Git repository, and want to connect it to your account, use</p>
+<pre tabindex="0"><code>git config --global user.email &#34;you@example.com&#34;git config --global user.name &#34;Your Name&#34;
+</code></pre><p>Set up a remote repository (you may need to connect VSCode to git as well).</p>
+<p>As instructed in the Observable documentation, just run <code>npm run dev</code> and a server should start, and open to a new page in your browser, likely on 127.0.0.1:3000. You&rsquo;re set!</p>
+<p><img loading="lazy" src="https://laggingindicators.blog/wp-content/uploads/2024/02/image-6.png?w=1024"></p>
+<p>Now, deploying the static site to GitHub pages. The steps are very similar for any static site generator process.</p>
+<p>Feel free to update your <code>title</code>, located in the <code>observablehq.config.ts</code> file, to update the website title in the browser.</p>
+<p>Run <code>npm run build</code> in the working directory, which will create a /dist folder. Remove the /dist folder from the <code>.gitignore</code>.</p>
+<p>Follow the <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">instructions on GitHub here</a> to create a new site.</p>
+<p>Create a new repository in GitHub, and follow the instructions in the &ldquo;…or push an existing repository from the command line&rdquo; code block.</p>
+<pre tabindex="0"><code>git remote add origin https://github.com/user_name/repo_name.gitgit branch -M maingit push -u origin main
+</code></pre><p>Verify that your site appears in GitHub. Go to Settings &gt; Pages, and choose Build and deployment &gt; GitHub Actions.</p>
+<p><img loading="lazy" src="https://laggingindicators.blog/wp-content/uploads/2024/02/image-7.png?w=496"></p>
+<p>There is an example workflow called &ldquo;Deploy static content to Pages.&rdquo; Click that, and a <code>static.yml</code> file should be created for you. The only edit to make here is editing the path argument from <code>.</code>, which is the whole repository, to <code>./dist</code>, which reflects you production files.</p>
+<pre tabindex="0"><code>        with:          # Upload only dist directory, default is &#39;.&#39;          path: &#39;./dist&#39;      - name: Deploy to GitHub Pages        id: deployment        uses: actions/deploy-pages@v4
+</code></pre><p>This will ensure the base of your site arrives at the <code>index.htm</code>l page. Navigate to <code>https://{username}.github.io/{repositoryname}/</code>.</p>
+<p>It&rsquo;s deployed! Feel free to <a href="https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site">add a custom domain based on GitHub&rsquo;s instructions here</a>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/coding/">Coding</a></li>
+      <li><a href="http://localhost:1313/tags/devops/">Devops</a></li>
+      <li><a href="http://localhost:1313/tags/git/">Git</a></li>
+      <li><a href="http://localhost:1313/tags/github/">Github</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/observable/">Observable</a></li>
+      <li><a href="http://localhost:1313/tags/project/">Project</a></li>
+      <li><a href="http://localhost:1313/tags/tutorial/">Tutorial</a></li>
+      <li><a href="http://localhost:1313/tags/windows/">Windows</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/thoughts-on-babbel-live-classes/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Thoughts on Babbel Live Classes</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/ridiculously-easy-origami-sunflowers-adapted/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Ridiculously Easy Origami Sunflowers (adapted)</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Lagging Indicators</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

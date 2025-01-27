@@ -1,0 +1,36 @@
+baseURL: https://laggingindicators.blog/
+languageCode: en-us
+title: Lagging Indicators
+theme: ["PaperMod"]
+ignoreLogs: ['warning-goldmark-raw-html']
+params:
+  ShowPostNavLinks: true
+  ShareButtons: ["linkedin"]
+  disableSpecial1stPost: true
+  ShowRssButtonInSectionTermList: true
+  ShowBreadCrumbs: true
+  label.text: test
+menu:
+  main:
+    - identifier: allposts
+      name: All posts
+      url: /archives/
+    - identifier: search
+      name: Search
+      url: /search/
+socialIcons:
+  - name: "linkedin"
+    url: "https://linkedin.com/leppekja"
+  - name: "rss"
+markup:
+  goldmark:
+    extensions:
+      footnote: true
+    renderer:
+      unsafe: true
+      footnoteAnchorPrefix: ""
+      footnoteReturnLinkContents: "^"
+  home:
+    - HTML
+    - RSS
+    - JSON

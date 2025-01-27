@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Personal-Projects on Lagging Indicators</title>
+    <link>http://localhost:1313/tags/personal-projects/</link>
+    <description>Recent content in Personal-Projects on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/personal-projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Monday links</title>
+      <link>http://localhost:1313/posts/monday-links/</link>
+      <pubDate>Mon, 12 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/monday-links/</guid>
+      <description>&lt;p&gt;- Whenever I do analyses I am nervous about being wrong, but using Excel&amp;rsquo;s &lt;a href=&#34;https://retractionwatch.com/2024/02/05/no-data-no-problem-undisclosed-tinkering-in-excel-behind-economics-paper/&#34;&gt;autofill function to impute data&lt;/a&gt; would have definitely been on my &amp;ldquo;this is not correct to do,&amp;rdquo; at the very least.&lt;/p&gt;
+&lt;p&gt;- Nice &lt;a href=&#34;https://mewo2.com/notes/terrain/&#34;&gt;example of a personal project&lt;/a&gt;. Contained, clear output, and interesting to the person doing it + delightful to play with and generate maps as a person who has no use for it. It&amp;rsquo;s fun!&lt;/p&gt;
+&lt;p&gt;- Helpful and clear description of how XSS (&lt;a href=&#34;https://journal.hexmos.com/domxss/&#34;&gt;cross site scripting&lt;/a&gt;) vulnerabilities work and can be identified.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

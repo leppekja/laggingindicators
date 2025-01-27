@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data-Visualization on Lagging Indicators</title>
+    <link>http://localhost:1313/categories/data-visualization/</link>
+    <description>Recent content in Data-Visualization on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 07 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/data-visualization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lessons learned on dashboard design for early-stage apps</title>
+      <link>http://localhost:1313/posts/lessons-learned-on-dashboard-design-for-early-stage-apps/</link>
+      <pubDate>Sat, 07 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/lessons-learned-on-dashboard-design-for-early-stage-apps/</guid>
+      <description>&lt;p&gt;What follows are a few takeaways from a recent app launch, where I had some successes and some things I had to fix. I also maintain dashboards for a wide set of clients on a different project that will be overhauled soon, and would like to apply these learnings during the redesign.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;The three guiding business questions for initial design are:&lt;/strong&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;How are we getting users?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;What our users are finding value in when using the application?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

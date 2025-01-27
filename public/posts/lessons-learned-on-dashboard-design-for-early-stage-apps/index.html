@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Lessons learned on dashboard design for early-stage apps | Lagging Indicators</title>
+<meta name="keywords" content="analytics">
+<meta name="description" content="What follows are a few takeaways from a recent app launch, where I had some successes and some things I had to fix. I also maintain dashboards for a wide set of clients on a different project that will be overhauled soon, and would like to apply these learnings during the redesign.
+
+The three guiding business questions for initial design are:
+
+
+How are we getting users?
+
+
+What our users are finding value in when using the application?">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/lessons-learned-on-dashboard-design-for-early-stage-apps/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/lessons-learned-on-dashboard-design-for-early-stage-apps/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Lagging Indicators (Alt + H)">Lagging Indicators</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives/" title="All posts">
+                    <span>All posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Lessons learned on dashboard design for early-stage apps
+    </h1>
+    <div class="post-meta"><span title='2024-09-07 00:00:00 +0000 UTC'>September 7, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>What follows are a few takeaways from a recent app launch, where I had some successes and some things I had to fix. I also maintain dashboards for a wide set of clients on a different project that will be overhauled soon, and would like to apply these learnings during the redesign.</p>
+<ul>
+<li><strong>The three guiding business questions for initial design are:</strong>
+<ul>
+<li>
+<p>How are we getting users?</p>
+</li>
+<li>
+<p>What our users are finding value in when using the application?</p>
+</li>
+<li>
+<p>What problems are users are encountering when using the application?</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Perhaps this verges on trivial, but it was helpful to think about these three questions when working with little input from stakeholders. This also shapes how the dashboard is organized, providing a storyline to follow, or natural groupings in which to place metrics and charts within. Users may not look at dashboards until the application has launched, and they may not have feedback until after they see something they dislike or don’t understand.</p>
+<p>Of course, these will become more specific over time, so it is essential to stay close the business needs and monitor the questions being asked and results being shared, then to build these into the dashboards. At the top level, consumer questions might be very vague, e.g., how is the product doing, or has anything changed in April that I should know about? But that’s okay - start with general indicators, and over time, incorporate questions that are commonly raised. At the same time, you need to be able to defend and recommend: for the former, to justify the decisions behind what to show on the dashboards, and for the latter, demonstrate why certain variations are better proxies than others.</p>
+<p>The audience for your dashboards will obviously influence the granularity of the sub-questions address. Executive leadership may care less about device types past whether web or mobile users are driving adoption, while specific device versions may serve as a key data point for product design teams.</p>
+<p>Lastly, when having initial conversations, dashboards should be discussed as cohesive reports. Many people, when deciding they want a dashboard, quickly start listing out metric definitions rather than focusing on the questions they value. Oftentimes, people will need guidance on what metrics exactly should even be used to measure something, so starting with ‘what to track and what to show’ is backwards. Instead of giving people the implicit definition of charts on a page (and people will happily tell you if they want a bar chart or pie chart rather than focus on whether the metric is meaningful), frame the conversation around answers to questions, like a research report was being done. The stakeholders should not design the dashboard!</p>
+<ul>
+<li><strong>Charts should explain themselves.</strong></li>
+</ul>
+<p>I wrote what I thought was a nice user-friendly explanation of what a chart meant right next to it. I then received many questions about what the chart meant and how to use it.</p>
+<p>Unfortunately, data visualizations are often not as easy to understand from the consumer point of view as I think they are. I fall into this trap frequently, trying to design a beautiful and engaging chart that fails in its key goal: deliver information effectively. This is the core of every chart in a dashboard, and more often than not, a large number with a title, subtitle, and basic trend indicator is going to be easier and quicker for a user to understand.</p>
+<p>There is an art to writing good helper text. I like to have the title of the chart be a question directly addressing a business need, e.g., how many users are active today?, and have the subtitle should answer the question.<a href="#410c1ca3-a3cf-4186-911d-31e7ca803dc9">1</a> The subtitle of the chart should embed the metric into plain text, e.g., 37 users logged-in and viewed a post today.<a href="#f7e3ca3b-3e71-4b76-97df-0141ab99dea8">2</a> The title guides the user to what they are looking for, and the subtitle tells the viewer how to use the answer in a sentence.<a href="#e4372ea8-af5b-4b11-a935-11c2a45902dc">3</a></p>
+<p>Technical definitions and sources should be embedded, but not intrusive. Standard footnotes should suffice, and fuller documentation should be linked to for complex calculations. As a simple example, take the chart “how many users viewed profiles?”: a subtitle may state “32% of users viewed more information from the search results for at least one restaurant”, and the footnote can state “measures the count of unique logged-in users this month divided by total active users this month with at least one click on a More Information button in at least 1 session.” However, if there are projections about the percent of users that will click it next month, I would just include a link to a document that explains the assumptions behind those.</p>
+<p>A number is almost never a simple division like on the product analytics websites claiming it is. The application or site will go through many UI and UX changes.<a href="#b4f8e547-03f7-4c1e-b184-3f5edec2cf7c">4</a> Bugs in tracking happen, or the product changes, or things are deleted or inactivated, or testing and bot data need to be cleaned and removed… Some instances will require you to share this in the published dashboard, while others won’t, but these adjustments are context specific. A helpful rule for me is if they affect the visual appearance of the chart, then I need to either change the chart or add a note.<a href="#3869e54c-ab66-4281-bb24-dc38f448dbba">5</a></p>
+<p>Lastly, well-formed titles, subtitles, and footers should point consumers in the right direction about limitations when using the numbers. Measurable numbers are usually proxies for what we want to know. Once a number is put on a dashboard, you have no control over how it is shared out or with what context. The distinctions between users, sessions, visitors, page views are technical, more technical then most consumers will care to distinguish between.</p>
+<p>So be mindful of what terms you use, and explain limitations succinctly. For example, for a chart titled “Which products are potential users looking at?,” I would rephrase the subtitle “Product A’s landing page was the most popular in May” to “Product A’s landing page had the most online views in May, based on total anonymous page visits across web and mobile.” This does not explicitly state the limitations, e.g., a user could have loaded the same page over and over on different unlinked devices to game the metric, but it at least acknowledges the calculation method and gives the consumer a starting point to discuss or ask about. And as always, you can include a technical definition in a footer or additional usage documentation for users who are interested.</p>
+<ul>
+<li><strong>Curate charts aggressively to key needs only.</strong></li>
+</ul>
+<p>Too many variations of a chart with similar business outcomes will lead to user confusion, and users will gravitate toward the best looking number. Obviously, complementary numbers are needed, like including rolling averages of active users that make long-term trends clearer.</p>
+<p>Demonstrate events in relation to the relevant or entire user base, depending on which is appropriate. Other segments of interest could be different time periods, sub-populations, or similar actions, but these should be curated such that any comparison from one segment to another is always easily interpretable, statistically valid, and relevant to business questions.</p>
+<p>The discovery, sign-up, and onboarding flow will be the primary focus. It might be assumed within the group that the app provides value to the user, and that the discovery and onboarding is the hump to go over. This means defining the funnel for acquisition and activation and clearly communicating this. At the same time, avoid steps that lead to over-optimization early on, e.g., click-through rates on intermediate pages that will be targeted as ‘inefficiencies’ and gamed to increase rates. Focus on the actions that should be providing value.<a href="#e599a364-2668-40d5-bf8f-77d29229363a">6</a></p>
+<p>I think the only exception to this is showing vanity metrics, e.g., those that will only go up, those that have little practical use for decision making, etc. as these will be requested for marketing use. Again, you will need dashboards that show the success of the application, and I should not disregard this. An example of this would be something like the all time number of page views, which might be helpful for a LinkedIn post, but nothing else. Metrics that are only useful for marketing are valuable for the business, which is something that I have not appropriately recognized in the past at times. In these cases, pair marketing metrics with value actions, e.g., conversion rates or returning rates, to emphasis their importance, or create a separate section entirely, depending on the audience.</p>
+<ul>
+<li><strong>Chart design should accommodate growth.</strong></li>
+</ul>
+<p>Gracefully handle extreme values and lopsided outcomes in visualizations. When choosing a chart type, ask how will this look in a situation where all values are zero, or when only one data point is very high, or the distribution is heavily skewed?</p>
+<p>Prepare for situations where values are zero. Handle null values, divisions by zero, and appropriate wordings of titles and subtitles. For me at least, bugs inevitably will surface on the dashboards - how can the chart fail without degrading the user experience entirely? For example, consider a chart stacked bar chart that shows the percent of users that are new versus returning today. The subtitle could read “{X}% of users today are returning users;” in this case, if zero users were active today, then the subtitle should update its wording to say “No users were active yet today” rather than “NaN% of users today…”</p>
+<p>Prepare for situations with heavy clustering when using charts that display individual features, e.g., scatter plots, dot plots. What if growth occurs very quickly? In faceted or stacked charts, what if one segment increases very quickly (and causes outlier or scale issues?) The chart design should consider the hypothetical distribution of possible values to the best possible extent. A representative example: consider a single stacked bar (<a href="https://observablehq.com/@observablehq/plot-stacked-percentages?intent=fork">like this</a>) with a segment label overlaid directly on each section of the bar. If one segment accounts suddenly for a large majority, the labels of other sections will be squished together and overlap into an unreadable mess.</p>
+<ul>
+<li><strong>Trust is lost quickly, and don’t assume it exists at the outset.</strong></li>
+</ul>
+<p>Consistency is key, and the difficulty of managing this is multiplied by how many reporting systems exist. Small differences will be quickly identified and questioned; as a trivial example, an internally surfaced activity log may not have test users filtered out, but dashboards do filter out testing traffic. Another BI user may calculate things differently then you. A key example I have dealt with is reconciling and explaining internal logging versus Google Analytics tags, where ad blockers may contribute to sizable differences in reported numbers. Deliberate coordination is required in these instances, but very clear documentation about calculations can prevent some of these issues.</p>
+<p>I’ve found myself in the situation on a different project where, because of data quality issues arising from tracking bugs in the past, users may check the dashboard, then send a note to confirm that the number is accurate to use for many months after. Additionally, some users may not care to even log a report and instead simply disregard the dashboard entirely. When people are first looking at the dashboards, they may come in with doubt as well, unsure about what the numbers mean and how to use them. It is an open question for me as to how to ameliorate this issue apart from accessible design.</p>
+<p>The dashboards need to be fast and visually appealing. It may seem odd to bring this up under the topic of trust, but I think for many people, this is a signal of competence. People will not wait 15 seconds for a large set of metrics to load. Start with small amounts of pre-aggregated data, then load more where needed at the user’s request. I work with a system where the dashboard refreshes after the user has loaded the page with cached data, so they may be on the dashboard, then suddenly see the numbers change, which is poor design, especially when it takes a minute to update.</p>
+<p>On the visual side, creating charts in Excel might work, but people don’t find them engaging. In many cases, dashboards are just reflections of progress, and progress doesn’t feel as good when it doesn’t look pretty. Professionalism goes a long way, and a modern design is a part of this.</p>
+<ul>
+<li><strong>It is inevitable that users will have questions that aren’t answered in the dashboard. I personally don’t think this is a failure, but you need a process for it.</strong></li>
+</ul>
+<p>Questions become reports. Reports which need to be repeated should become dashboards. Do not try to answer a question with a dashboard, but with a report. The dashboard is a live summary of the underlying validated research.<a href="#3f903db1-3ec0-489a-a50f-faffa774abd5">7</a></p>
+<p>The minimum ‘user journey’ for a dashboard consumer is to have a question, identify what the answer to the question is on the dashboard, then be able to form a good ‘why’ question based on this that they can follow up on if needed. So a user having a question on a dashboard and wanting to dive deep is okay<img alt="8" loading="lazy" src="#8b2a608d-4302-4ea3-9729-6dfffb3043b5"></p>
+<p>An approach for a metric in a dashboard I have heard is overview number, drill down to a pre-defined segment, then row view of the data. To me, this is the best version of the ‘self-serve analytics’ trend in which products promise that dashboard consumers would be able to answer questions for themselves.</p>
+<p>Self-serve analytics doesn’t account well for early stage launches in which it is more common for bugs and tracking issues to find their way downstream. Investigative questions, or why something occurs, need to be explored fully, which may require looking over data quality, third-party data, custom queries, etc., for small teams. It also assumes a high level of statistical knowledge and data architecture for anything past basic applications and questions.<a href="#17739a64-9cd0-4b3a-a63f-0eea7f0dd189">9</a> It requires consumers to properly translate their questions into a calculation, which is an acquired skill. Alternatively, it takes a large amount of work for the dashboard designer to constrain users to only certain comparisons that are valid.</p>
+<p>The proper workflow should be a dashboard that a user has a ‘why’ question on, which is then referred to a analyst, who then creates a specific report based on expert knowledge of the way the data is collected and aggregated. This is the subject of many complaints, that these questions can’t self-answered within the dashboard, but personally, I think this is the exactly right workflow. Dashboards should allow people to form good questions that can then be handed over to a subject-matter expert.</p>
+<p>Lastly, people will want to export the data to review it themselves in Excel or Google Sheets, and they will need a CSV download. If you do include this, expect many questions from them about their self-aggregated findings. If you do not, expect requests for exports. My best advice is make exports available in the context of getting data, e.g., I need the names of contacts of this segment to reach out to them, but not for external data analysis.</p>
+<ul>
+<li><strong>Prioritize flexibility when choosing an initial framework.</strong></li>
+</ul>
+<p>Having used dashboard software that prioritize UI builders, e.g., Power BI, Tableau, I would recommend lower-level dashboard frameworks. I agree with the current marketing campaign for <a href="https://observablehq.com">Observable Framework</a>: “the best dashboards are built with code.”</p>
+<p>Recently, I deployed Observable Framework through an Azure Static App from a GitHub repository, leveraging GitHub Actions to update data regularly and the Azure Entra ID for authentication (but they do just have a easy password protection also). Certainly, learning this took more work than it would have to pay a larger sum of money to just leverage an existing platform. Yet it keeps costs low, is extensible, offers professional visualizations, allows for clear metric definitions in code or templates that are not locked into a vendor’s platform, makes extending existing visualizations into longer one-off reports easy (with Observable notebooks), and leverages common languages (vanilla JS, Python, YAML) rather than vendor-specific terminologies or languages. Note that learning Plot (and D3 where needed) is still a big lift, but the declarative nature of Plot is very similar to other visualization libraries that future analysts should be familiar with.</p>
+<p>Note that for many applications, a plug and play solution (Google Analytics, PostHog, etc.) might be the simplest to start with. Note that this won’t work for applications that work with regulated data, (HIPAA, for example), and still requires a significant amount of management, experience, and maintenance.<a href="#82d1bb7e-e40f-4c55-8ead-33f7e86377e4">10</a> With teams I’ve worked with, Google Analytics is the standard that users will make comparisons to if you do decide to build something outside of this. Additionally, as a solo developer working on projects - if I only need a dashboard for myself - I leverage open source projects that avoid third-party tracking, but do provide pre-built dashboards.</p>
+<p>Authentication and data security is frustrating to deal with. Ensure that your dashboard tooling can access your database prior to trying to build anything on it, that users will be limited to their permissions, that managing users and permissions can scale, etc. But that is outside the scope of this post.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/analytics/">Analytics</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="http://localhost:1313/posts/from-a-mouse-to-a-trackball/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>From a Mouse to a Trackball</span>
+  </a>
+  <a class="next" href="http://localhost:1313/posts/daily-snap-news-aggregator-launched/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Daily SNAP News Aggregator launched</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Lagging Indicators</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

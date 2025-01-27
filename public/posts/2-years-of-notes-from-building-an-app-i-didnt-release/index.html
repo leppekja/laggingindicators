@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>2 years of notes from building an app I didn&#39;t release | Lagging Indicators</title>
+<meta name="keywords" content="coding, programming, project, technology, web-development">
+<meta name="description" content="Close to 2 years ago, I had an idea for a mobile application that allowed users to store, submit, and manage tax reimbursements in foreign countries. For 2 years ago, I on and off worked on this idea and had a functioning version on my phone - and for nearly all that time, I never felt like the application was ready to release to potential users - and it doesn&rsquo;t look like I&rsquo;ll ever get it there.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/posts/2-years-of-notes-from-building-an-app-i-didnt-release/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.9de45e225101e4f99701d2b68fc6b8a1ef6027928be6391fa15bf7f56326c909.css" integrity="sha256-neReIlEB5PmXAdK2j8a4oe9gJ5KL5jkfoVv39WMmyQk=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/2-years-of-notes-from-building-an-app-i-didnt-release/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Lagging Indicators (Alt + H)">Lagging Indicators</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/archives/" title="All posts">
+                    <span>All posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      2 years of notes from building an app I didn&#39;t release
+    </h1>
+    <div class="post-meta"><span title='2024-11-25 00:00:00 +0000 UTC'>November 25, 2024</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Close to 2 years ago, I had an idea for a mobile application that allowed users to store, submit, and manage tax reimbursements in foreign countries. For 2 years ago, I on and off worked on this idea and had a functioning version on my phone - and for nearly all that time, I never felt like the application was ready to release to potential users - and it doesn&rsquo;t look like I&rsquo;ll ever get it there.</p>
+<p>What follows are my work logs for the past few years from building this application, and what I learned.</p>
+<h3 id="may-2023-choosing-a-framework">May 2023 Choosing a framework<a hidden class="anchor" aria-hidden="true" href="#may-2023-choosing-a-framework">#</a></h3>
+<p>Since I know users use iPhones for their work, and I have an Android device, I wanted a cross-platform framework so I only had to manage one codebase and learn a single new language. I considered building just a web app, but wanted the experience of downloading the app from the app store, and learning how to do it myself.</p>
+<p>I had some experience with React, so I first looked up React Native and started trying to install that. Exploring on the web led me to Flutter and I liked the fact it almost included a framework for the UI. Less work for me, and it was nice that it would align with usability needs and look professional and familiar to users.</p>
+<p>The deciding factor was that I managed to get Flutter installed and working first before I got React Native working on my machine.</p>
+<h3 id="june-2023">June 2023<a hidden class="anchor" aria-hidden="true" href="#june-2023">#</a></h3>
+<p>I didn&rsquo;t start documenting my work process immediately when building the app. In June, and May before it, I worked on the UI of the app, specifically:</p>
+<ul>
+<li>
+<p>Built a mock home page</p>
+</li>
+<li>
+<p>Built a mock cedula card page (user information)</p>
+</li>
+<li>
+<p>Enabled the taking of pictures</p>
+</li>
+<li>
+<p>Enabled a list page of receipts</p>
+</li>
+<li>
+<p>Created a mock data model and allowed for local storage</p>
+</li>
+</ul>
+<p>It was at this point when I needed to go further and implement a database that I started writing. Local storage didn&rsquo;t seem like a necessarily secure or long lasting model. Families would want to share receipts across purchases, and access them on different devices to download and print. I would need to upload the receipts anyway to APIs to OCR the submission instructions, receipt IDs, and other purchase information.</p>
+<h4 id="flutterfire--firebase">Flutterfire &amp; Firebase<a hidden class="anchor" aria-hidden="true" href="#flutterfire--firebase">#</a></h4>
+<p>Incorporating authentication, analytics, and a database into the application.</p>
+<p>I decided with Firebase for a few reasons:</p>
+<ul>
+<li>
+<p>I didn&rsquo;t want to worry about platform-specific APIs that much</p>
+</li>
+<li>
+<p>Wanted something pre-built that I could outsource authentication, security, etc to</p>
+</li>
+<li>
+<p>Saw it had online and offline capabilities, which I thought was nice.</p>
+</li>
+<li>
+<p>Seemed to have good support with Flutter, and a decent amount of code-labs and instructions at first glance. I looked at AWS (Amplify?) and Azure as well, but since I was already using a Google framework, I decided the path of least resistance was likely a Google back end as well.</p>
+</li>
+</ul>
+<h4 id="organization-name">Organization Name<a hidden class="anchor" aria-hidden="true" href="#organization-name">#</a></h4>
+<p>I had built my app in the sample directory Flutter created as part of a code lab, which mean the Organization ID was com.example.something, which is disallowed by the App Store or something else. So at this point I created a new Flutter project, then copied my code over.</p>
+<p>I also refactored here to split up all the code in <code>main.dart</code> to specific files for the camera, profile, and receipt section.</p>
+<p>Here, Flutter notified me that Flutter had updated and I needed to run <code>flutter update</code>.</p>
+<p>On trying to build my app after this, I had to restart VSCode because the <code>Future</code> type was not being recognized by Dart. Restarting fixed that error.</p>
+<p>Now, Flutter told me to run <code>dart fix</code> to fix common issues in my files (apparently which happens after a Flutter update). I did, and it returned help text. I needed to run <code>dart fix --apply</code> to have the fixes implemented.</p>
+<p>Here, I tried again to run <code>flutterfire configure --project=PROJECTNAME</code>. That returned a <code>pubspec.yml</code> not found in <code>flutterfire/cache/something</code> error. I re-logged into Firebase, then re-ran <code>dart pub global activate flutterfire_cli</code>. This activated <code>flutterfire</code> again, after which running the <code>flutterfire configure</code> command worked.</p>
+<p>I had to re-run <code>flutter pub add firebase_core</code>.</p>
+<p>I keep getting a</p>
+<p>    <code>Building with plugins requires symlink support. Please enable Developer Mode in your system settings. Run start ms-settings:developers to open settings.</code></p>
+<p>error. No idea what <code>symlink</code> is at all.</p>
+<p>At this point, the imports fore firebase_core and firebase_options are no longer marked as errors, but <code>FirebaseDatabase</code> class still is tagged as undefined. I thought it was an error and restarted VSCode, then I realized I didn&rsquo;t actually bring over the import for the Firebase RealTime database because I decided to implement the basic authentication module first. My bad.</p>
+<p>I ran <code>dart fix</code> again. I don&rsquo;t know why. I thought I just ran it. But it asked me too, so that&rsquo;s that.</p>
+<h3 id="authentication">Authentication<a hidden class="anchor" aria-hidden="true" href="#authentication">#</a></h3>
+<p>I followed <a href="https://firebase.google.com/docs/auth/flutter/start?hl=en&amp;authuser=0">this article</a>, and the this <a href="https://firebase.google.com/codelabs/firebase-auth-in-flutter-apps#2">codelab</a>. Something I like about Flutter so far is the simplicity of installing and adding packages.</p>
+<p>I ran into an issue in Step 5, Sign-In screen, when trying to add in the <code>headerBuilder</code> option. VSCode (or me) had set <code>const SignInScreen</code> to return, rather than just <code>SignInScreen</code>. When I got the the <code>headerBuilder</code> arg, I kept getting an <code>Invalid const</code> error, which I kept thinking was the <code>headerBuilder</code> since that is what was being highlighted. But I had set the whole widget to a <code>const</code>, and the <code>headerBuilder</code> couldn&rsquo;t be calculated as a <code>const</code>.</p>
+<p>I had to set the <code>assets: - images/</code> folder in the <code>pubspec.yaml</code> folder for the <code>SignInScreen</code> widget to display the icon correctly. I also updated the size and background and added a second, different sized version to show on this page, versus the launcher icon.</p>
+<h3 id="icon">Icon<a hidden class="anchor" aria-hidden="true" href="#icon">#</a></h3>
+<p>I designed a simple icon in Figma (free plan) in about 15 minutes and saved as a .png. It took a bit to find the actual developer guidelines on how to build the application launcher app. I was also confused that I had to install <code>flutter_launcher_icons</code> to update the application icon, and I didn&rsquo;t find the documentation very helpful. I copy-pasted the configuration example from the docs page. I ran <code>pub run flutter_launcher_icons</code>, which, I don&rsquo;t exactly know what it does.</p>
+<p>The icon successfully updated, but when the app loads, the icon is magnified, and the image I uploaded isn&rsquo;t (so it looks small in comparison).</p>
+<p>I don&rsquo;t know if it worked for iPhone, or if I need to upload multiple sizes. I got a &ldquo;Overwriting default iOS launcher icon with new icon - No platform provided&rdquo; note when I ran <code>pub run flutter_launcher_icons</code>.</p>
+<h3 id="july-2023-profile-page">July 2023 Profile Page<a hidden class="anchor" aria-hidden="true" href="#july-2023-profile-page">#</a></h3>
+<p><strong>Restarting the project</strong></p>
+<p>I had been away on vacation for 2 weeks. I hadn&rsquo;t worked on this app for probably 1 to 2 weeks before that, as well, due to wrapping everything else up before the vacation. This is rough, because it is hard to keep track of a) what I did last, b) if I left it in a state where I need to do something crucial next that I don&rsquo;t remember, and c) what I planned to do next. So, my steps to restarting a project now:</p>
+<ol>
+<li>
+<p>Try to run the project. See what happens.</p>
+</li>
+<li>
+<p>Run anything that the IDE asks you to run. E.g., <code>dart fix</code>. I swear I get this message every time I open VSCode.</p>
+</li>
+<li>
+<p>Focus on the part you think you remember doing last and spend more time understanding that section than anything else.</p>
+</li>
+<li>
+<p>Make a minor, completely unrelated change that is almost worthless, e.g., adjust the padding on something, just to see if you remember how to commit a change. This will also feel like quick progress.</p>
+</li>
+</ol>
+<p>I previously think I was working on the Google Firebase integration, so restarting work there first. I also set a goal. By the end of July, have a publishable app that allows users to log in and store their organization tax information. This is the information that the store will ask you for when you try to generate a reimbursment. I already have the major parts of this, but I want to polish it and ensure it works, and publish it (at least informally).</p>
+<p>I read about logging options due to a warning that tells me I shouldn&rsquo;t use <code>print</code> in production code. That said, all the examples I found online about Dart logging literally just printed warnings from the <code>logging</code> package to the standard output, and ended there, or just used <code>print</code> statements themselves. So not worth it at this point for me to fix.</p>
+<h3 id="firebase-realtime-database">Firebase (Realtime Database)<a hidden class="anchor" aria-hidden="true" href="#firebase-realtime-database">#</a></h3>
+<p>I started with the Firebase documentation and quickly felt overwhelmed. I had not worked with a JSON tree type data structure before. I read the <a href="https://firebase.google.com/docs/database/flutter/start">Firebase Flutter articles on Realtime Database</a>. I can&rsquo;t say I deeply understood the <a href="https://firebase.google.com/docs/database/rtdb-vs-firestore">Choose a Database</a> article either, but I assumed that for this minimal app, either would work. So, I went for the simplest.</p>
+<p>I ran <code>flutter pub add firebase_database</code> and <code>flutter run</code>, and added the Realtime Database package to my <code>main.dart</code> file. I was looking for a simple example on a) how to set up the data structure and b) how to write and read data, which incidentally are two of the five help articles they had (at least at the time of writing). Neither, however, were in-depth enough to get me started.</p>
+<p>I switched to <a href="https://firebase.google.com/codelabs/firebase-get-to-know-flutter">a Google Codelab</a> which covered how to add Firestore, rather than the RealTime database, but close enough.</p>
+<p>I ran into this error:</p>
+<p>    <code>: Error: Too many positional arguments: 1 allowed, but 2 found firebase_auth_web.dart:94 Try removing the extra positional arguments.</code>       </p>
+<p><code>FirebaseCoreWeb.registerService('auth', (firebaseApp) async { ^ : Context: Found this candidate, but the arguments don't match    firebase_core_web.dart:43static void registerService(                ^^^^^^^^^^^^^^^    Failed to compile application.</code></p>
+<p>Fortunately apparently this was a very recent issue for many people and resolved it with <a href="https://stackoverflow.com/questions/76500308/flutter-web-fails-with-firebase-too-many-positional-arguments-1-allowed-but-2">this StackOverflow post</a>.</p>
+<p>I followed this tutorial for a bit, implementing the UI for it. Then got distracted with how the screen looks. I implemented some UI changes, considered how I wanted the profile to function, and explored some example applications. I decided that editing the information would be done on a separate screen, to allow for users to click on each piece of information and immediately copy it to their clipboard. I then implemented the copy to clipboard functionality, which happily, was a trivial task.</p>
+<p>Here, a couple things to do (to keep track for myself):</p>
+<ul>
+<li>
+<p>refactor the label and profile text to be a container, so you can click anywhere on the text or label to copy.</p>
+</li>
+<li>
+<p>Implement a copy all functionality.</p>
+</li>
+<li>
+<p>Implement a edit page (imagining a pencil icon leading to a new page)</p>
+</li>
+<li>
+<p>Actually stop procrastinating on the difficult problem and implement the database.</p>
+</li>
+</ul>
+<h3 id="7182023">7/18/2023<a hidden class="anchor" aria-hidden="true" href="#7182023">#</a></h3>
+<p>I watched <a href="https://www.youtube.com/watch?v=EXp0gq9kGxI">this Firecast video</a> that helped me ensure I had the packages installed correctly. The last step failed for me when trying to compile to Chrome Web, as I am using VSCode and didn&rsquo;t have the <code>logcat</code> window. I couldn&rsquo;t find an equivalent debug console, and thought that perhaps I didn&rsquo;t properly connect the Web version to the Realtime Database. So I turned on an emulater (Pixel 2 API). From this, while compiling, I received a <code>...FlutterFirebaseFirestoreMessageCodec.java uses unchecked or unsafe operations. Note: Recompile with -Xlint:unchecked for details.</code> error. Found <a href="https://stackoverflow.com/questions/76145595/flutterfirebasefirestoremessagecodec-java-uses-unchecked-or-unsafe-operations-n">this StackOverflow post</a>.</p>
+<p>Before updating the SDK version, I tried the simple database call laid out in the video. Finally, a <code>Caused by: com.google.firebase.database.DatabaseException: Firebase Database error: Permission denied</code>, which was good news. At least it was doing something.</p>
+<p>Looking in the console, my Rules prevented access.</p>
+<p>    <code>{&quot;rules&quot;: {&quot;.read&quot;: false,&quot;.write&quot;: false}</code></p>
+<p>Based on reading the <a href="https://firebase.google.com/docs/database/security/rules-conditions">Firebase security rules documentation</a>, and a quick query to Github Copilot, I adjusted these to:</p>
+<p><code>{&quot;rules&quot;: {&quot;users&quot;: {&quot;$user_id&quot;: {&quot;.read&quot;: false,&quot;.write&quot;: &quot;$user_id === auth.uid&quot;}}}}</code></p>
+<p>Of course, for some reason I can&rsquo;t tell, hot restart isn&rsquo;t working. I have to manually click the hot restart button for the app to reload.</p>
+<p>But now it works! I had the update the code in my <code>onPressed</code> call as well to get the unique ID of a user I had previously created. It now looks like this:</p>
+<pre tabindex="0"><code>    onPressed: () {
+        FirebaseAuth _auth = FirebaseAuth.instance;
+        User? user = _auth.currentUser;
+        String? uid = user!.uid;
+        DatabaseReference _testRef =
+            FirebaseDatabase.instance.ref().child(&#39;users/&#39; + uid);
+        _testRef.set(&#39;Hello World&#39;);
+    }
+</code></pre><p>Which was a slight adjustment from the installation video linked above. I also manually change the JSON data path of the Realtime Database under the Data tab in the Firebase Console. Where it previously stated <code>https://project_name.firebaseio.com/</code>, I added a key <code>users</code> and another object below with the user ID of the user I had previously created. I looked this up in the Authentication Console and copy-pasted. The data model now looked like:</p>
+<pre tabindex="0"><code>    https://project_name.firebaseio.com/
+    - users
+        - user_id:&#34;&#34;
+</code></pre><p>After restarting my project and clicking the button with the function above, it added &ldquo;Hello World&rdquo; as the value for the <code>user_id</code> key. This was a big accomplishment! I now have a database.</p>
+<p>Here, I manually entered sample data for the profile page for this user. One thing that confuses me at this point is how to create the data model; if that is manually done from the console? How do I add a new <code>user_id</code> branch in the <code>users</code> branch, for example? So I pushed passed this, and for the rest of today, just wanted to get a working example of reading data from the database for the current user. I updated the <code>read</code> rules on the <code>users</code> and new <code>profile</code> branches to all be <code>&quot;$user_id === auth.uid&quot;</code>.</p>
+<p>Here, I returned to the <a href="https://firebase.google.com/docs/database/security/rules-conditions">in-depth video of incorporating RealTime Database into Flutter</a>. And with a bit of refactoring, including adjusting my `ProfilePage` widget to a Stateful Widget from a Stateless widget, and copying the code from the video, I had a working event listener set up that was reading data from the database.</p>
+<p>The video was excellent, detailed, and got it working. However, it did that thing that teaches do where they teach you the less good method first, get you to do it, then tell you about a different method that is much better in every way. So now I apparently need to delete a bunch of that code and forget about that event listening process and use a StreamBuilder instead.</p>
+<h3 id="7282023">7/28/2023<a hidden class="anchor" aria-hidden="true" href="#7282023">#</a></h3>
+<p>It has been 10 days since I&rsquo;ve last looked at this. I quickly need to remind myself how to open Visual Studio Code and what all this multi-colored text on my screen is. I see a triangle with an exclamation mark inside, and a bright blue bubble with &ldquo;33&rdquo; inside of it. I literally have to scroll to read all of the warnings. I either make actual progress on my app, or add a <code>const</code> keyword in 30 different places for the next 20 minutes.</p>
+<p>I remember that at the end of the last day, everything broke and I spent a couple hours getting progressively angrier and angrier due to a <code>Map&lt;object, object&gt; can't be assigned to the parameter type 'Map&lt;String, dynamic&gt;'</code> or some similar error. Turns out the answer was in the Youtube comments section, and I needed to cast the returned value to a <code>Map&lt;dynamic, dynamic&gt;</code>, rather than a <code>Map&lt;String, dynamic&gt;</code>, which I am unsure why still. But it works.</p>
+<p>Another error I ran into here was a <code>LateError (LateInitializationError: Field '_myStream' has not been initialized.)</code>. If I tried to leave the Profile page, the app would freeze and throw this error. Looking at the call stack (which I am only now learning how to use this properly), I see it pauses on the <code>deactivate</code> method of the Profile page I am setting up. I rewatched the video (around 23 minutes) discussing the set up and take down of the <code>StreamSubscriptio</code>n. For some reason, I had <code>final _myStream</code> assigned to the event listener. Removing <code>final</code> solved the problem. Again, I don&rsquo;t understand why at all. <code>late</code> tells the compiler (I thought) that later, I would assign the <code>StreamSubscription</code> to a value, which I did to the event listener.</p>
+<p>The <code>final</code> keyword tells the compiler that the value of the variable won&rsquo;t be changed later, so perhaps this is incompatible with the event listener, which could change in the future? Or perhaps it can&rsquo;t be cancelled if the value can&rsquo;t be deleted? That is my guess, at least.</p>
+<p>I also spent a half hour (trying) finishing setting up Google Analytics in the application, based on <a href="https://firebase.google.com/docs/flutter/setup?platform=ios">a tutorial here from Firebase</a>. I don&rsquo;t care much for these tutorials where the tutorial is the installation, then a code file that you are supposed to add to your project. That isn&rsquo;t a tutorial - it&rsquo;s a code file. But I faithfully copy-pasted the code from the example <code>main.dart</code> into my existing project. The <a href="https://firebase.flutter.dev/docs/analytics/get-started/">Google Analytics get started tutorial</a> ends at <code>FirebaseAnalytics analytics = FirebaseAnalytics.instance;</code>. And there is no more, even though apparently that is not enough to get it working. Or perhaps it is. It isn&rsquo;t clear how quickly the events will start being logged to Google Analytics, so maybe I just need to be less impatient.</p>
+<p>I tried to enable Debug mode by running <code>adb shell setprop debug.firebase.analytics.app PACKAGE_NAME</code> in my terminal, as <a href="https://firebase.google.com/docs/analytics/debugview">suggested here in the DebugView tutorial</a>. I am using a Pixel emulator right now, as my phone USB-C connection is not working right now for some reason and refusing to connect to my laptop. That, unsurprisingly, did absolutely nothing that I could tell.</p>
+<p>Here, I also connected the rest of the Profile fields to the event listener approach (saving the update to StreamBuilder for another day). I also added a <code>persistentFooterButton</code> to the Profile page, allowing a user to copy all the fields to insert into a text message or email (common action for the purpose of the application).</p>
+<p>Next Steps:</p>
+<ul>
+<li>
+<p>Edit profile fields</p>
+</li>
+<li>
+<p>Reorganize so MVP of app is just the profile card and nothing else</p>
+</li>
+<li>
+<p>Understand log-in flow (how to add new users?)</p>
+</li>
+<li>
+<p>add profile fields</p>
+</li>
+</ul>
+<h3 id="852023">8/5/2023<a hidden class="anchor" aria-hidden="true" href="#852023">#</a></h3>
+<p>It is midway through projects that the scale of really releasing a production application starts to intimidate me. It is not difficult to start a project like this; the app developers and learning resources all aim to get you started. The novelty of getting something on the screen wears off. The screen is suddenly superficial as I realize the depth of what yet needs to be implemented, a majority of which is totally invisible to the user. Looking at the application now, it doesn&rsquo;t even feel like I am building anything. There is nothing I can touch or hold on to. Nothing feels like I&rsquo;ve created it. Instead, it is word after word, click after click, all dependent on machinery I don&rsquo;t understand. I don&rsquo;t feel like I have made anything new - I&rsquo;m only implementing something that exists, already, that is doable by anyone.</p>
+<h3 id="8202023">8/20/2023<a hidden class="anchor" aria-hidden="true" href="#8202023">#</a></h3>
+<p>Pain in my wrists, so I haven&rsquo;t been working on this project at all. So I am simplifying - version one, only display card information, and that&rsquo;s it. See if people even use it, and if they do, then I&rsquo;ll keep working on it.</p>
+<h3 id="8222023">8/22/2023<a hidden class="anchor" aria-hidden="true" href="#8222023">#</a></h3>
+<p>Checking to see how to create a new user and create that sign-up flow. But it appears Firebase Auth has that built in! Amazing. Successfully created a new user, but didn&rsquo;t handle getting returned <code>null</code> data from the Realtime Database for a new user for the new home page, so had to resolve that. First had a <code>Unhandled Exception: type 'Null' is not a subtype of type 'Map&lt;dynamic, dynamic&gt;'</code> error, which I resolved by adding an if-then statement to check if the data is null prior to creating my object from the data.</p>
+<p>I leveraged GitHub Copilot here. Did a great job explaining to me the difference between <code>event.snapshot.exists</code> and just a if-then checking if <code>event.snapshot.value</code> is <code>null</code>. The <code>.exists</code> method checks if the reference exists or not, regardless of whether it is null. One aspect I find valuable is Copilot&rsquo;s attempts to provide an example based in the code I am currently working on. This is usually where it goes wrong, sometimes getting the logical flow of the code incorrect, but good enough that I can see it and adjust. It also reminded me how to properly write an if-then statement in Dart and how to resolve the <code>local variable not used</code> error that came up.</p>
+<h3 id="9182023">9/18/2023<a hidden class="anchor" aria-hidden="true" href="#9182023">#</a></h3>
+<p>Another long break away from the application. Severe forearm pain and nerve issues in my leg are making me wary of being on a computer for too long. Family emergencies, weddings, and dinners with friends fill up the time.</p>
+<p>But I&rsquo;m close. I start today with the aim of getting a About page in the application, and fixing the App Bar. I move the copy button to a floating action button, fix the color on the log out button. I add an App Drawer as an expanding side menu. I&rsquo;m increasingly turning to Copilot to answer my questions and help write boilerplate code rather than StackOverflow.</p>
+<p>I update the user information in the drawer. Null checks continue to be difficult to get used too. What if the user doesn&rsquo;t have a name? I need to use the email instead. I spend a half hour trying to get the first two characters of either, but my <code>substring</code> call keeps telling me <code>RangeError... :Invalid value</code>, which confuses me, since one of the strings is longer than 2 characters and I have a <code>a ?? b</code> null check.</p>
+<p>Finally I solve it with a ternary condition. <code>a</code> wasn&rsquo;t null, but an empty string. Now to the actual problem of where each page takes the person. I&rsquo;d like to include details about the the filing process for my users. Right now, it&rsquo;s just a card on the phone that a user could substitute a picture of the card of for most cases. Sure, the copy functionality might save someone a few minutes, but not enough. If I can provide answers to some commonly asked questions, to serve as a sort of reference document, then that could be another low-hanging fruit to attract users to log in occasionally. I&rsquo;m not sure where to get the information though, or how to keep it updated -&gt; I don&rsquo;t want to give wrong information, also. One wrong answer and I imagine people will be wary of future information, especially early on.</p>
+<p>I create an About page that includes an overview of the app, upcoming potential features, contact information, and a simple privacy statement.</p>
+<h3 id="10292023">10/29/2023<a hidden class="anchor" aria-hidden="true" href="#10292023">#</a></h3>
+<p>Another long break in development. I&rsquo;m not even sure what I need to do. I started with adjusting the copy area in the profile section, so clicking on the section name or the value copies the text to the clipboard, rather than just the value, making it a bit easier to get the values.</p>
+<p>But I really need to work on the Edit profile page.</p>
+<p>I started off with replacing the separate Edit page with a callback function in the App Bar that flips a <code>_isEditState</code> toggle, switching the widget from a text display with a copy function to a <code>Form</code> based off of <a href="https://docs.flutter.dev/cookbook/forms/validation">this tutorial</a>.</p>
+<h3 id="10292024">10/29/2024<a hidden class="anchor" aria-hidden="true" href="#10292024">#</a></h3>
+<p>The last time I worked on this app was 1 year ago exactly. I only realized this as I opened the project again. I didn&rsquo;t realize it had been this long of a break, and I am disappointed in myself for not getting to this sooner. However, I have a clear goal - to take screenshots of the app to share with people to see if they would be interested in using the application.</p>
+<p>That said, I have been using the app consistently during the year, and at checkouts, restaurants, and at home the test version of the application has been consistently helpful. I have mentioned it to other people who all expressed interest in something like this, and I am still motivated to finish this with a release.</p>
+<p>I started by trying to run the application in an emulator. The debugger would start, run <code>assembleGradle</code>, then fail. I found the <code>flutter daemon</code> logs after pressing the run and debug button with multiple configurations, which stated a few errors:</p>
+<pre tabindex="0"><code>&gt; [ERR] Command exited with code 128: git fetch --tags
+&gt; Standard error: fatal: unable to access &#39;https://github.com/flutter/flutter.git/&#39;: Could not resolve host: github.com
+&gt; WARNING: your installation of Flutter is 531 days old.
+&gt; To update to the latest version, run &#34;flutter upgrade&#34;.
+&gt; Starting device daemon...&gt; [ERR] Error 1 retrieving device properties for sdk gphone... x86 64:
+&gt; [ERR] adb.exe: device &#39;emulator...&#39; not found
+</code></pre><p>Some of these I could handle, and I ran <code>flutter upgrade</code> to get this out of the way. This of course also returned an error.</p>
+<pre tabindex="0"><code>&gt; Your flutter checkout has local changes that
+&gt; would be erased by upgrading. If you want to keep
+&gt; these changes, it is recommended that you stash  
+&gt; them via &#34;git stash&#34; or else commit the changes  
+&gt; to a local branch. If it is okay to remove local
+&gt; changes, then re-run this command with &#34;--force&#34;.
+</code></pre><p>I committed and pushed all files I had updated locally, not realizing this wasn&rsquo;t exactly what the error was pointing me to - that apparently I had changed Flutter itself? I confirmed this with a web search, <a href="https://stackoverflow.com/questions/73380891/your-flutter-checkout-has-local-changes-that-would-be-erased-by-upgrading-whe">finding a StackOverflow answer</a> and - after looking for the directory that I installed Flutter to - I ran the suggested command: <code>git diff HEAD</code>, which returned nothing. I had tried to run the <code>flutter upgrade</code> in my local project directory; apparently this was wrong and I should run it in the installation directory, and doing this returned the same local changes error. Running <code>flutter doctor</code> showed no issues in my installation.</p>
+<p>It was running <code>git status</code> in the installation directory that showed me the following message:</p>
+<pre tabindex="0"><code>&gt; On branch stable
+&gt; Your branch and &#39;origin/stable&#39; have diverged,
+&gt; and have 20 and 7227 different commits each, respectively.
+&gt; (use &#34;git pull&#34; if you want to integrate the remote branch with yours)Untracked files:(use &#34;git add &lt;file&gt;...&#34; to include in what will be committed) 
+.pub-cache/
+</code></pre><p>I ran <code>git pull</code>, which resulted in many merge conflicts. I tried running <code>git status</code> once more, which returned now a massive list of updates and modifications. Trying to cut my losses, I ran <code>flutter upgrade --force</code>, which came back with a <code>&lt;&lt; was unexpected at this time</code>, which was also surprising to me. Another web search got me to just resetting the HEAD, to remove perhaps the changes that got included in the <code>git pull</code> command I tried? I then ran <code>flutter upgrate</code>, a typo, but it did start running <code>flutter upgrade</code> anyway. Still, I cancelled, ran <code>flutter upgrade</code>, and this started the process working normally, then errors with the same local changes error above. I am unsure what changed exactly in my <code>.pub-cache/</code> file, but a year after last touching the project, I don&rsquo;t imagine it will be relevant. I simply ran the upgrade with the <code>--force</code> command. During this, VSCode prompted me to reload Dart, after the installation was complete, and since my terminal is on the right hand side of my screen, the VSCode message hides any text at the bottom of the terminal - and so I thought the process was complete, clicked reload, and potentially interupted the <code>flutter upgrade</code> process. But it still reloaded the Flutter SDK, and then VSCode again prompted me to run <code>flutter pub upgrade</code>, so sure, great, I ran that too.</p>
+<p>Another message at the end:</p>
+<pre tabindex="0"><code>&gt; Building with plugins requires symlink support. Please enable Developer Mode in your system settings. Run 
+&gt; start ms-settings:developers
+&gt; to open settings.
+&gt; exit code 1
+</code></pre><p>So I enabled Developer Mode, and tried to run <code>flutter pub upgrade</code> again, but still in the Flutter installation directory, which gave a <code>expected to find project root in current working directory</code> error, so I guess I need to run this in the actual app directory. Couple of <code>cd ../</code>s later and it tells me &ldquo;no dependencies changed,&rdquo;, so that doesn&rsquo;t make sense given it provided a list to update, and a few packages have apparently been discontinued, like <code>firebase_dynamic_links</code>. The terminal suggests <code>flutter pub upgrade --major-versions</code>, and what the terminal suggests, the terminal gets.</p>
+<p>I moved on, and just ran Run and Debug from <code>main.dart</code>, laughed at the &ldquo;Errors exist in your project&rdquo; message, and clicked run.</p>
+<p>Close, but still failure.</p>
+<p>First I get this error:</p>
+<pre tabindex="0"><code>&gt; You are applying Flutter&#39;s main Gradle plugin imperatively using the apply script method, which is deprecated and will be removed in a future release. Migrate to applying Gradle plugins with the declarative plugins block: https://flutter.dev/to/flutter-gradle-plugin-apply
+</code></pre><p>Deprecation means it still works, so can ignore that one. The key error (hopefully) here:</p>
+<pre tabindex="0"><code>&gt; - Where: 
+&gt;   Script &#39;C:\Flutter\flutter\packages\flutter_tools\gradle\src\main\kotlin\dependency_version_checker.gradle.kts&#39; line: 375 
+- What went wrong:  Failed to apply plugin class &#39;Dependency_version_checker_gradle$FlutterDependencyCheckerPlugin&#39;.
+&gt; Error: Your project&#39;s Kotlin version (1.6.10) is lower than Flutter&#39;s minimum supported version of 1.7.0. Please upgrade your Kotlin version. 
+&gt; Alternatively, use the flag &#34;--android-skip-build-dependency-validation&#34; to bypass this check.
+</code></pre><p>Great! Just upgrade a whole different library. But this error was informative enough and even as Android Studio booted up, I just changed my <code>build.gradle</code> file to point to version 1.7.0.</p>
+<p>Aside from an error in my incomplete edit profile widget, which I commented out for now, I encountered multiple errors with <code>TextTheme</code> colors not being defined. Perhaps this was the <code>.pub_cache</code> error from earlier, and I <a href="https://stackoverflow.com/questions/76015716/the-getter-accentcolor-isnt-defined-for-the-class-themedata">found another StackOverflow question discussing the upgrade error</a>, and the <a href="https://docs.flutter.dev/release/breaking-changes/theme-data-accent-properties">Flutter documentation</a>. I ran <code>flutter pub cache clean</code>, given that the colors error were coming from <code>material.dart</code> in the cache folder, referencing the <code>flutterfire-ui</code> package, and followed up with <code>flutter pub get</code>, as the terminal told me to do.</p>
+<p>Additionally, <code>flutterfire-ui</code> apparently was deprecated and broken out to a different repository, so I had to update <code>auth.dart</code> and <code>main.dart</code>. It isn&rsquo;t clear from the new example in the changelog to update <code>EmailProvider()</code> to <code>EmailAuthProvider</code>. Additionally, this is the first time I&rsquo;ve seen the <code>hide</code> option in an import used, such as:</p>
+<pre tabindex="0"><code>import &#39;package:firebase_auth/firebase_auth.dart&#39; hide EmailAuthProvider;
+import &#39;package:firebase_ui_auth/firebase_ui_auth.dart&#39;;
+</code></pre><p>I finally came across <a href="https://github.com/firebase/FirebaseUI-Flutter/issues/236">the exact issue in the repository</a>. One comment suggests updating the SDK environment versions, but I don&rsquo;t know how to find what the current versions should be. I simply updated the upper boundary to the version I saw listed on the repository, but didn&rsquo;t know what to switch the lower boundary to. I tried manually updating some of the firebase_auth_ui packages, which simply resulted in dependency conflicts and the automatic version solving erroring.</p>
+<p>I ran <code>flutter pub upgrade --major-versions</code>. Trying a build here gave me <code>The plugin firebase_auth requires a higher Android SDK version.</code>, so I needed to update to <code>minSdkVersion 23</code> in the build.gradle file. It notes that &ldquo;Following this change, your app will not be available to users running Android SDKs below 23,&rdquo; so tough luck to those folks. I had to do this twice, admittedly, since I added the whole suggested block to the <code>build.gradle</code> file in the <code>/android</code> directory, when I needed to update the <code>build.gradle</code> file in the <code>/android/app/</code> directory.</p>
+<p>And this did it! The emulator started up with the latest version of the application. Only took multiple hours, and it was a bit of a frustrating experience. All this for a few static screenshots for promotion.</p>
+<p>Finally to actual coding. Estimated time spent today on this is probably 4 hours already. I re-add in screens I had previously taken out to add screenshots.</p>
+<p>My initial outreach to potential users will just be a WhatsApp message to the target user group, asking for test users, accompanied by a brief overview of key functionality and a screenshots.</p>
+<p>I also made a Google Play Developer account, alongside a new email address for the app, paid the $25 developer fee, and completed the identity verification. I had not realized that to launch, you needed at least 20 test users for a 2-week period.</p>
+<h3 id="1162024"><strong>11/6/2024</strong><a hidden class="anchor" aria-hidden="true" href="#1162024">#</a></h3>
+<p>Have been thinking about this project daily. Wrote up a sample feature set for a version 1, 2, and 3 in my Notes application at about 3 AM one night in the past week. I have been considering an initial switch for the test launch to store data on the user&rsquo;s phone locally, to reduce initial latency when logging in, plus to allow offline usage. Offline usage is probably the key feature, especially usage overseas or within buildings with poor cell reception.</p>
+<p>I tried some YouTube videos about this on SQFlite, Hive, Shared Preferences, and Secure Storage. All of these primarily to me seemed like additional work - Shared Preferences wasn&rsquo;t suitable, and SQFlite and Hive seemed like overkill for just initial storing of simple key values. Secure Storage seems like the best option. Prior to taking any action, I just reviewed Firebase to see what I could learn about existing latency and caching options, and started to install the performance monitoring tools available - but it&rsquo;s late, so I&rsquo;ll continue tomorrow.</p>
+<h3 id="1172024">11/7/2024<a hidden class="anchor" aria-hidden="true" href="#1172024">#</a></h3>
+<p>Continuing to try to install the performance library for Firebase. Had to reinstall the <code>flutterfire_cli</code>; no idea why, but I did. Running <code>flutterfire configure</code> after installing the library fails.</p>
+<pre tabindex="0"><code>&gt; FirebaseCommandException: An error occured on the Firebase CLI when attempting to run a command. 
+&gt; COMMAND: firebase projects:list --json &gt; ERROR: Failed to list Firebase projects. See firebase-debug.log for more info.
+</code></pre><p>In the log file:</p>
+<pre tabindex="0"><code>&gt; [debug] [2024-11-08T01:44:31.164Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+</code></pre><p>Running <code>firebase login</code> in the console tells me I am properly logged in. Clicking on the link in the log redirects to <a href="https://developers.google.com/identity/sign-in/web/sign-in">https://developers.google.com/identity/sign-in/web/sign-in</a>, which seems to be an entirely different topic under a &ldquo;Deprecated&rdquo; section, so that&rsquo;s great. After trying to restart this application development after a year, I think that stability is an aspect of any next framework that I would look for before starting.</p>
+<p>DuckDuckGo and <a href="https://stackoverflow.com/questions/52891500/http-error-401-while-setting-up-firebase-cloud-functions-for-android-project#52891586">StackOverflow</a> solved this in website result 1; it was Copilot&rsquo;s 3rd suggestion, so logging in and out of Firebase solved it. Curiously logging out gave a <code>Invalid refresh token for &lt;email&gt;, did not need to deauthorize</code> message, but not sure what that means, and I don&rsquo;t care enough to explore. But <code>configure</code> finally ran.</p>
+<h3 id="1182024">11/8/2024<a hidden class="anchor" aria-hidden="true" href="#1182024">#</a></h3>
+<p>First morning session. An hour a day is my goal, and the key last improvements I want to make is improving the receipt details page to make it look better. I was thinking that at this point, I should try to stay as close to the default formatting and constructions as possible to make it as easy as possible. I want to reach presentable and no more, so while I can look at a page and make endless small improvements on it, it looks good enough when I stop that a person could see how they use it.</p>
+<p>I did add some small additional information and indicators that would help users see what actions they could take from a screen shot. For example, a button and a disabled button, indicating that actions vary on what can be done, and colored indicators based on data. In my mind, I want people to be able to reach the conclusion that the app automatically reacts to the data stored, and customizes their interactions with each object based on its attributes. On green and red checkboxes, I added &ldquo;(eligible)&rdquo; or &ldquo;(not eligible)&rdquo; to make it clear what the colors indicated, for example, even if this wouldn&rsquo;t be necessary for a daily user in the future.</p>
+<h3 id="11122024">11/12/2024<a hidden class="anchor" aria-hidden="true" href="#11122024">#</a></h3>
+<p>Anxiety is high before launch, and I am struggling to decide between approaches. A casual text message with screenshots asking people to reach out with their information for a test group, or build a professional landing page to obtain emails?</p>
+<h3 id="11242024">11/24/2024<a hidden class="anchor" aria-hidden="true" href="#11242024">#</a></h3>
+<p>A few weeks break again due to family events. And this time, I am deciding not to release the application.</p>
+<p>As of now, I would no longer consider myself a &ldquo;user&rdquo; of the application, which, to me, is the primary driver of enjoyment when building the application. If I am no longer building it for myself, then, suddenly the application is now a burden. Maintenance, updates, security - not to mention the costs of any database, developer accounts, or APIs I would rely on. Right now, adding another 10 hours a week where I need to sit in front of my computer and code isn&rsquo;t something that I am looking for. I think I was naive to think that &ldquo;finishing&rdquo; a project like this is releasing it - releasing it is starting the project.</p>
+<p>I don&rsquo;t think this is a permanent decision - mid next year, I may need this application again, and if that is the case, I wouldn&rsquo;t doubt that I would enjoy diving back in and building it - but to the extent that I would find value in it.</p>
+<p>This said, I am quite proud of what I have learned, implemented, and and designed. I learned a new programming language and framework and produced a working mobile app that solved a real-life pain point for myself. I have a much greater appreciation for the individuals who do build and maintain mobile apps and open-source programs by themselves now, surely. I don&rsquo;t feel like this is a failure - I didn&rsquo;t approach this from the viewpoint of making money, or a dream of users - but of identifying a problem and fixing it, and that I did.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/tags/coding/">Coding</a></li>
+      <li><a href="http://localhost:1313/tags/programming/">Programming</a></li>
+      <li><a href="http://localhost:1313/tags/project/">Project</a></li>
+      <li><a href="http://localhost:1313/tags/technology/">Technology</a></li>
+      <li><a href="http://localhost:1313/tags/web-development/">Web-Development</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="next" href="http://localhost:1313/posts/questions-on-how-congress-can-fix-food-stamps/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Questions on “How Congress Can Fix Food Stamps”</span>
+  </a>
+</nav>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Lagging Indicators</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

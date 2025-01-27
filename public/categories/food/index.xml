@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Food on Lagging Indicators</title>
+    <link>http://localhost:1313/categories/food/</link>
+    <description>Recent content in Food on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/food/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>April SNAP Updates</title>
+      <link>http://localhost:1313/posts/april-snap-updates/</link>
+      <pubDate>Sun, 05 May 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/april-snap-updates/</guid>
+      <description>&lt;p&gt;Note a slightly different format to topic, rather than state-based.&lt;/p&gt;
+&lt;h3 id=&#34;snap-interview-waivers-in-some-places-expiring&#34;&gt;Snap Interview Waivers in some places expiring&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.mdhs.ms.gov/post/expiration-of-waiver-of-interview-requirements-for-snap-benefits-in-mississippi/&#34;&gt;Expiration of Waiver of Interview Requirements for SNAP Benefits in Mississippi&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://news.yahoo.com/beltrami-county-snap-interview-waiver-023600199.html&#34;&gt;Beltrami County SNAP interview waiver ends April 30&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I would be very curious to see any study performed exploring differences in program administration and case outcomes between while the waiver was in effect, and the before / after where the waiver is not in place. How has the speed of applications changed? Overpayment or underpayment rates? What do the caseworkers think about this change? I also came across &lt;a href=&#34;https://www.reddit.com/r/foodstamps/comments/198kzdi/petitioning_for_the_end_of_snap_interview/?rdt=33738&#34;&gt;this Reddit thread on the impact of interview waivers&lt;/a&gt;, but would like to see a structured case study.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SNAP Benefits News - Feb 2024</title>
+      <link>http://localhost:1313/posts/snap-benefits-news-feb-2024/</link>
+      <pubDate>Sat, 02 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/snap-benefits-news-feb-2024/</guid>
+      <description>&lt;p&gt;The following is a curated list of news articles by U.S. state and nationally that discussed SNAP benefits in February 2024.&lt;/p&gt;
+&lt;h3 id=&#34;national&#34;&gt;National&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.fns.usda.gov/snap/governor-letter-performance-operations&#34;&gt;Letter from Secretary Vilsack to Governors on SNAP Performance and Operations&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Poor performance on the SNAP efficiency measures meant 44 states got letters from the USDA expecting improvements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.thefencepost.com/news/congressional-leaders-agree-on-ag-funding-as-vilsack-talks-about-snap-pilot/&#34;&gt;Congressional leaders agree on ag funding as Vilsack talks about SNAP pilot&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The SNAP pilot they discuss is the &lt;a href=&#34;https://www.politico.com/live-updates/2024/02/16/congress/nearing-nutrition-funding-deal-spending-talks-00141962&#34;&gt;SNAP-choice pilot&lt;/a&gt;, limiting purchasable foods to “nutrient-dense” foods. Unsurprising that a paternalistic policy with the name “SNAP-choice” is being pushed by a Republican. See the next article for the industry’s response.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>There&#39;s a stone in my lentils</title>
+      <link>http://localhost:1313/posts/theres-a-stone-in-my-lentils/</link>
+      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/theres-a-stone-in-my-lentils/</guid>
+      <description>&lt;p&gt;For the first time, in my many years of eating lentils, I found a small stone in my lentils while I was eating the curry. It was slightly smaller than a single lentil.&lt;/p&gt;
+&lt;p&gt;On the bag of the lentils, and in every online recipe describing how to cook lentils, the following warning exists: be sure to rinse your lentils prior to cooking to remove any rocks or debris as modern cleaning equipment cannot. And I do. But I have never actually found a pebble, and so thought this was a cautionary warning that lawyers required. Now, I figured, the process of cleaning the lentils during production likely was efficient and accurate enough now (in the direct contradiction to what the warning tells me). A good self-reflection example of how my prior experience incorrectly outweighs expert knowledge.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

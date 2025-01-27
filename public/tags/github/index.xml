@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Github on Lagging Indicators</title>
+    <link>http://localhost:1313/tags/github/</link>
+    <description>Recent content in Github on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Observable Framework on Windows WSL and quickly deploying to GitHub Pages</title>
+      <link>http://localhost:1313/posts/using-observable-framework-on-windows-wsl-and-quickly-deploying-to-github-pages/</link>
+      <pubDate>Fri, 16 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/using-observable-framework-on-windows-wsl-and-quickly-deploying-to-github-pages/</guid>
+      <description>&lt;p&gt;If you&amp;rsquo;ve got &lt;a href=&#34;https://github.com/observablehq/framework&#34;&gt;the framework&lt;/a&gt; installed, and just want to deploy the static pages, &lt;a href=&#34;#deploying&#34;&gt;skip to below&lt;/a&gt;. Note - my first time doing this, but it works. You can always deploy directly to Observable.&lt;/p&gt;
+&lt;p&gt;Observable Framework is &lt;a href=&#34;https://github.com/observablehq/framework/issues/90&#34;&gt;not supported on Windows&lt;/a&gt;, according to an issue in their GitHub. (Update Mar 2024: Observable Framework is now supported on Windows). To use it, you need to use WSL.&lt;/p&gt;
+&lt;p&gt;If you want to use it through WSL, then the following still applies. Fortunately, it is very easy to do. Steps I had to take to do this:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

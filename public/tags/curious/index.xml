@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Curious on Lagging Indicators</title>
+    <link>http://localhost:1313/tags/curious/</link>
+    <description>Recent content in Curious on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/curious/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why (not) write online?</title>
+      <link>http://localhost:1313/posts/why-not-write-online/</link>
+      <pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/why-not-write-online/</guid>
+      <description>&lt;p&gt;a) improve communication skills by forcing myself to formalize an opinion. Feedback from anonymous readers may either point out an error I made while translating what I think to a written document or a flaw in the argument itself. Of course, I need to be willing to be wrong, and reminding myself that I am excited about learning is an powerful way to cope with finding errors in my work. Writing online is a low-barrier opportunity to become comfortable with this.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>All my cultural tourism is commercial exchanges</title>
+      <link>http://localhost:1313/posts/all-my-cultural-tourism-is-commercial-exchanges/</link>
+      <pubDate>Fri, 23 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/all-my-cultural-tourism-is-commercial-exchanges/</guid>
+      <description>&lt;p&gt;I recently went on a weekend trip, where I counted each time that I interacted with a person who was a citizen of the country I was visiting. I did not include any interactions with individuals at the airport prior to landing at the destination, nor once I reached the airport to return. Non-verbal interactions were not considered, e.g., making room for someone on the sidewalk, or gesturing for a car to go first at an intersection.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>There&#39;s a stone in my lentils</title>
+      <link>http://localhost:1313/posts/theres-a-stone-in-my-lentils/</link>
+      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/theres-a-stone-in-my-lentils/</guid>
+      <description>&lt;p&gt;For the first time, in my many years of eating lentils, I found a small stone in my lentils while I was eating the curry. It was slightly smaller than a single lentil.&lt;/p&gt;
+&lt;p&gt;On the bag of the lentils, and in every online recipe describing how to cook lentils, the following warning exists: be sure to rinse your lentils prior to cooking to remove any rocks or debris as modern cleaning equipment cannot. And I do. But I have never actually found a pebble, and so thought this was a cautionary warning that lawyers required. Now, I figured, the process of cleaning the lentils during production likely was efficient and accurate enough now (in the direct contradiction to what the warning tells me). A good self-reflection example of how my prior experience incorrectly outweighs expert knowledge.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

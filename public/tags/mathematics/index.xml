@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Mathematics on Lagging Indicators</title>
+    <link>http://localhost:1313/tags/mathematics/</link>
+    <description>Recent content in Mathematics on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Cartoon Guide to Statistics</title>
+      <link>http://localhost:1313/posts/the-cartoon-guide-to-statistics/</link>
+      <pubDate>Wed, 03 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/the-cartoon-guide-to-statistics/</guid>
+      <description>&lt;p&gt;Written by &lt;a href=&#34;https://www.larrygonick.com/titles/science/the-cartoon-guide-to-statistics/&#34;&gt;Larry Gonick&lt;/a&gt; &amp;amp; Woollcott Smith&lt;/p&gt;
+&lt;p&gt;Note: This is based on the &amp;ldquo;Revised and Updated Edition&amp;rdquo;.&lt;/p&gt;
+&lt;figure&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://laggingindicators.blog/wp-content/uploads/2024/03/wp-17118311210711858430788391303633.jpg?w=768&#34;&gt;&lt;/p&gt;
+&lt;figcaption&gt;
+&lt;p&gt;Cover page of The Cartoon Guide to Statistics&lt;/p&gt;
+&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Deriving, and learning when to apply, statistical formulas is always going to be difficult. It turns out that including cartoons does not make it any easier.&lt;/p&gt;
+&lt;p&gt;I would put statistics writing into three general categories: teaching statistical literacy, e.g., How To Lie With Statistics; deriving the principles of statistical concepts, e.g., any college-level textbook; and applying statistical methods, e.g., an academic study. The Cartoon Guide To Statistics tries to do a bit of all three of these, and is worse off for it. The guide covers probability, random variables, sampling, confidence intervals, hypothesis testing, experimental design, and regression in just over 200 pages.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Handwriting on Lagging Indicators</title>
+    <link>http://localhost:1313/tags/handwriting/</link>
+    <description>Recent content in Handwriting on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/handwriting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Replacing a mouse with a pen and tablet?</title>
+      <link>http://localhost:1313/posts/replacing-a-mouse-with-a-pen-and-tablet/</link>
+      <pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/replacing-a-mouse-with-a-pen-and-tablet/</guid>
+      <description>&lt;p&gt;These are some thoughts about using a &lt;a href=&#34;https://estore.wacom.com/en-us/wacom-intuos-s-bluetooth-black-us-ctl4100wlk0.html&#34;&gt;Wacom Intuos Wireless Pen and Tablet&lt;/a&gt; to complement a mouse and keyboard over the past few weeks. I made this purchase in an effort to decrease forearm and finger pain from overuse working at a desk. Previously, I&amp;rsquo;ve been using the Logitech MX Master 3 For Business mouse, and I was hoping that switching to a pen and tablet would limit some of the forearm rotation that was causing me pain. While I put the mouse to the side, I am still using a Glove80 keyboard, as well as Windows Voice Access.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

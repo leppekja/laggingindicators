@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Data on Lagging Indicators</title>
+    <link>http://localhost:1313/tags/data/</link>
+    <description>Recent content in Data on Lagging Indicators</description>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 21 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SNAP State Performance Indicators Datasets</title>
+      <link>http://localhost:1313/posts/snap-state-performance-indicators-datasets/</link>
+      <pubDate>Wed, 21 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/snap-state-performance-indicators-datasets/</guid>
+      <description>&lt;p&gt;I started to post &lt;a href=&#34;https://www.fns.usda.gov/snap/efficiency-effectiveness-measures&#34;&gt;SNAP performance indicators&lt;/a&gt; from the USDA in machine-readable format, aggregating and cleaning the data from the many PDF tables. &lt;a href=&#34;https://github.com/leppekja/SNAP-performance-indicators&#34;&gt;This repository&lt;/a&gt; includes quick-access to cleaned, FIPS-linked CSV long-format tables of yearly state reported indicators for &lt;a href=&#34;https://www.fns.usda.gov/snap/qc/timeliness&#34;&gt;Application Processing Timeliness&lt;/a&gt;, &lt;a href=&#34;https://www.fns.usda.gov/snap/qc/per&#34;&gt;Program Error Rates&lt;/a&gt;, and &lt;a href=&#34;https://www.fns.usda.gov/snap/qc/caper&#34;&gt;Case and Procedural Error Rates&lt;/a&gt; (coming soon).&lt;/p&gt;
+&lt;p&gt;USDA Descriptions as follows:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Application Processing Timeliness &amp;ldquo;measures the timeliness of states’ processing of initial SNAP applications. The Food and Nutrition Act of 2008 entitles all eligible households to SNAP benefits within 30 days of application, or within 7 days, if they are eligible for expedited service.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
