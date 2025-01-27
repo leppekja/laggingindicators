@@ -1,6 +1,6 @@
 ---
 title: "Obligatory Migration Post from Wordpress to Hugo"
-date: "2025-1-26"
+date: "2025-01-26"
 tags:
   - "coding"
   - "personal-projects"
