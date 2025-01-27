@@ -1,23 +1,23 @@
 ---
-title: "Questions on \"Why We Should Rethink the SNAP Interview Requirement: A Former Caseworker’s Perspective\""
+title: 'Questions on "Why We Should Rethink the SNAP Interview Requirement: A Former Caseworker’s Perspective"'
 date: "2024-04-09"
-categories: 
+categories:
   - "snap"
   - "snap-benefits"
-tags: 
+tags:
   - "food-access"
   - "fraud"
   - "news"
   - "politics"
 ---
 
-* * *
+---
 
 **Context**
 
 Student and supporting organizations wrote a [letter to the USDA recommending that the SNAP application interview requirement be removed](https://defendstudents.org/news/body/Student-Defense-Congressional-letter-on-SNAP-petition-FINAL.pdf), with [the accompanying press release here](https://defendstudents.org/news/student-advocacy-coalition-continues-push-for-u-s-department-of-agriculture-to-remove-barriers-to-snap-benefits). A news article that summarizes the entire P.R. push for this is [accessible here through Fortune magazine](https://fortune.com/2024/01/16/food-stamps-snap-interview-obstacle/).
 
-* * *
+---
 
 [Why We Should Rethink the SNAP Interview Requirement: A Former Caseworker’s Perspective](https://www.clasp.org/blog/why-we-should-rethink-the-snap-interview-requirement-a-former-caseworkers-perspective/) is an op-ed from The Center for Law and Social Policy (CLASP) which argues SNAP interviews should be made optional. Based on the author's experience as a caseworker, the mandatory interviews are largely a pretense for detecting fraud, and the time could be better spent providing holistic assistance to SNAP participants. These "unnecessary interviews that are ineffective at finding what infinitesimal fraud exists" only serve to increase the stigma associated with accessing food stamps by treating applicants as if they "are thieves that must be watched".[1](#9e749f2e-5a57-454a-a61c-2fdc32647381)
 
@@ -33,8 +33,8 @@ So without direct data, I do think that we need to explore more about how interv
 
 **Second, the author minimizes the monetary impact of fraud**, . From the article:
 
-> In fiscal year 2019, only [0.1 percent](https://www.clasp.org/publications/report/brief/snap-program-integrity-how-racialized-fraud-provisions-criminalize-hunger/) of SNAP issuances were overpayments based on Intentional Program Violations—which worked out to just a dime for every $100 of SNAP benefits. Moreover, only [0.9 percent](https://www.clasp.org/publications/report/brief/snap-program-integrity-how-racialized-fraud-provisions-criminalize-hunger/) were overpayments of any sort, including household and agency errors. 
-> 
+> In fiscal year 2019, only [0.1 percent](https://www.clasp.org/publications/report/brief/snap-program-integrity-how-racialized-fraud-provisions-criminalize-hunger/) of SNAP issuances were overpayments based on Intentional Program Violations—which worked out to just a dime for every $100 of SNAP benefits. Moreover, only [0.9 percent](https://www.clasp.org/publications/report/brief/snap-program-integrity-how-racialized-fraud-provisions-criminalize-hunger/) were overpayments of any sort, including household and agency errors.
+>
 > Paragraph 2, Why We Should Rethink the SNAP Interview Requirement: A Former Caseworker’s Perspective; numbers sourced from [SNAP “Program Integrity:” How Racialized Fraud Provisions Criminalize Hunger](https://www.clasp.org/publications/report/brief/snap-program-integrity-how-racialized-fraud-provisions-criminalize-hunger/)
 
 I am a bit skeptical of percentages presented out of context of real numbers rather than monetary values. If I understand correctly, SNAP issuances reflects the total monetary values of SNAP benefits, e.g., if a household gets $100 of benefits from SNAP, the SNAP issuance is $100. So if we accept the author's estimate of .1% (.001) in FY19, and we get from the [FY19 USDA State Activity Report](https://fns-prod.azureedge.us/sites/default/files/resource-files/FY19-state-activity-report.pdf) that total issuances were $55,622,284,536, then we can conclude that $55,622,284.536 (fifty-five million, six-hundred and twenty-two thousand, and two hundred eighty-four dollars and fifty-four cents (rounded-up)) was the amount of overpayments based on Intentional Program Violations. Using the .9% (.009) number, overpayments of any sort would come to just over 500 million dollars. That, to me, is quite a lot of money that was not disbursed correctly.
@@ -68,15 +68,15 @@ The anecdotes about how interviews may be difficult to attend, or incorrectly sc
 While not cited in the blog post, the anecdotes are similar to the [concerns raised in the CalFresh study](https://codeforamerica.org/news/think-big-start-small-how-implementing-flexible-interviews-improves-benefit-delivery/) that the [original letter to the USDA](https://defendstudents.org/news/body/Student-Defense-Congressional-letter-on-SNAP-petition-FINAL.pdf) relies on. Neither the blog post nor the original letter bother to discuss the actual intervention made by Code For America to implement flexible interviews. Here are just two of the intervention's successes:
 
 > Applicants who received information about flexible interviews and who called the flexible interview line received a benefit determination roughly seven days sooner than those in the control group and were 6% more likely to be enrolled in CalFresh (an 11% increase in the approval rate).
-> 
+>
 > The positive effect on approval rates was largest for people whose county office approval rates were the lowest, which means that the flexible interview line makes outcomes more equitable across LA County zip codes.
-> 
+>
 > [Think Big, Start Small: How Implementing Flexible Interviews Improves Benefit Delivery](https://codeforamerica.org/news/think-big-start-small-how-implementing-flexible-interviews-improves-benefit-delivery/)
 
 So clearly, there are ways that state agencies can streamline their interview process. As Code For America summarizes:
 
 > The success of the flexible interview pilot shows that large county departments can successfully plan, implement, and evaluate major changes to their business processes. They can do this in a way that centers the client experience and optimizes client outcomes while actually improving efficiency for caseworkers and streamlining their business processes.
-> 
+>
 > [Think Big, Start Small: How Implementing Flexible Interviews Improves Benefit Delivery](https://codeforamerica.org/news/think-big-start-small-how-implementing-flexible-interviews-improves-benefit-delivery/)
 
 A [Center on Budget and Policy Prorities (CBPP) and the author's own organization CLASP released some excellent recommendations](https://www.cbpp.org/research/improving-snap-and-medicaid-access-snap-interviews) in 2018 to improve flexibility of interviews and completion rates - maybe the USDA can work with states to implement these first.
@@ -90,11 +90,11 @@ Other opportunities to learn are available. There still are waivers for [streaml
 As a last note, the blog post claims that removing the interview requirement would “help minimize agency errors”.[12](#4e3afc79-fcf7-4f56-a193-3411561e874b) The author offers no follow-up evidence or explanation to demonstrate why this would be the case, so I won't bother with it. Instead, I'll point to some key actions by the USDA's Food And Nutrition Service that could replace some of the verification done in the interview with automated practices, which is definitely part of a way forward.
 
 > FNS is:
-> 
+>
 > Awarding [$5 million in grants](https://www.fns.usda.gov/snap/process-and-technology-improvement-grants-program) per year to select state agencies to develop and implement projects that use technology to improve the quality and efficiency of SNAP application and eligibility determination systems; and
-> 
+>
 > Contracting with national payroll data providers to help states improve income verification for SNAP applicants and recipients, which is expected to reduce payment errors and improve the timely processing of applications and recertifications.
-> 
+>
 > [Agriculture Secretary Calls on States to Take Action to Improve SNAP Administration for Families in Need](https://www.fns.usda.gov/news-item/fns-001.24)
 
 The $5 million in grants offer a competing vision of how the SNAP application process could be streamlined. Five out of the six [grant winners of the FY 2023 Process and Technology Improvement Grant from the USDA FNS](https://www.fns.usda.gov/snap/fy-2023-ptig-award-summaries) are funded to modernize and automate state application systems (project descriptions adjusted for brevity):
@@ -114,13 +114,15 @@ Projects like these should be pursued.
 **I'm not convinced that SNAP interviews the best opportunity for holistic case management**. I don’t have experience as a caseworker, so I only have questions here, which are:
 
 - is the time provided for the interview not enough to confirm the application and help search for alternative resources?
-    - Are there automated verification methods outside the interview that we can incorporate into the process?
+
+  - Are there automated verification methods outside the interview that we can incorporate into the process?
 
 - if we “must include an optional interview for those who would benefit from it,” how do we identify the applicants that would benefit from it?
-    - If those optional interviews occur, where is the harm in confirming an applicant’s information?
+
+  - If those optional interviews occur, where is the harm in confirming an applicant’s information?
 
 - What are NGO or other government opportunities (social service nonprofits, calling a [2-1-1 line](https://www.211.org/)) for case management, and why should an optional SNAP interview replicate their efforts?
-    - If decreasing administrative burden is a goal, then limiting the interviews to only address SNAP benefits seems more effective than expanding the amount of assistance a caseworker is expected to provide.
+  - If decreasing administrative burden is a goal, then limiting the interviews to only address SNAP benefits seems more effective than expanding the amount of assistance a caseworker is expected to provide.
 
 **Collecting trusted data about SNAP fraud is exactly the evidence that we can use to disprove the stereotypes about public benefits recipients.** When politicians try to cut SNAP benefits and create these myths about people not working or stealing from the government, they can easily be challenged with data from a robust and verified data collection process. How will state and national agencies defend this change when many politicians are already reinstating qualifications that preclude participation entirely in many states across the U.S.?
 
@@ -128,7 +130,7 @@ Projects like these should be pursued.
 
 But I am left unconvinced that streamlining the SNAP application process and ensuring dignity to participants means removing the mandatory SNAP interviews. We should instead first gather more data to determine the effects of the change and explore enhancements to state implementations.
 
-* * *
+---
 
 **Additional Resources**
 
@@ -136,10 +138,10 @@ But I am left unconvinced that streamlining the SNAP application process and ens
 
 - Here is [Code for America's overview page on food assistance programs](https://codeforamerica.org/programs/social-safety-net/food-benefits/).
 
-* * *
+---
 
 **Notes**
 
 Relevant quotes and sources from the original blog post are listed below. Last accessed 4/8/2024. The entirety of the article as a PDF is embedded below from 4/8/2024.
 
-[why-we-should-rethink-the-snap-interview-requirement-a-former-caseworkers-perspective](https://laggingindicators.blog/wp-content/uploads/2024/04/why-we-should-rethink-the-snap-interview-requirement-a-former-caseworkers-perspective.pdf)[Download](https://laggingindicators.blog/wp-content/uploads/2024/04/why-we-should-rethink-the-snap-interview-requirement-a-former-caseworkers-perspective.pdf)
+[why-we-should-rethink-the-snap-interview-requirement-a-former-caseworkers-perspective](https://laggingindicators.wordpress.com/wp-content/uploads/2024/04/why-we-should-rethink-the-snap-interview-requirement-a-former-caseworkers-perspective.pdf)[Download](https://laggingindicators.wordpress.com/wp-content/uploads/2024/04/why-we-should-rethink-the-snap-interview-requirement-a-former-caseworkers-perspective.pdf)

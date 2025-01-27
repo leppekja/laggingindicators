@@ -1,7 +1,7 @@
 ---
 title: "The Cartoon Guide to Statistics"
 date: "2024-04-03"
-tags: 
+tags:
   - "book-review"
   - "data-science"
   - "education"
@@ -16,7 +16,7 @@ Note: This is based on the "Revised and Updated Edition".
 
 <figure>
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/03/wp-17118311210711858430788391303633.jpg?w=768)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/03/wp-17118311210711858430788391303633.jpg?w=768)
 
 <figcaption>
 
@@ -42,7 +42,7 @@ An effective use of the illustrations is to explain the intuition behind confide
 
 <figure>
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/03/20240317_1505085146801323665959063.jpg?w=768)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/03/20240317_1505085146801323665959063.jpg?w=768)
 
 <figcaption>
 

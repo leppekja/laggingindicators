@@ -1,16 +1,16 @@
 ---
 title: "Play 8 Red Squares"
 date: "2024-09-15"
-categories: 
+categories:
   - "personal"
-tags: 
+tags:
   - "coding"
   - "project"
 ---
 
 I re-deployed [8 Red Squares](https://leppekja.github.io/8redsquares/), a site that allows you to play through the [8 Queens Puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle) on different sized boards.
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/09/image-5.png?w=644)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/09/image-5.png?w=644)
 
 Future enhancements I'd like to add are
 

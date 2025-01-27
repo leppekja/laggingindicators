@@ -10,7 +10,7 @@ Written by Darrell Huff and illustrated by Irving Geis. Originally published in 
 
 **In a sentence**: a quick, worthwhile general knowledge read that explains how people misuse statistics through familiar and useful examples (that could use an update).
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/03/20240303_185748.jpg?w=166)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/03/20240303_185748.jpg?w=166)
 
 > I’ll face up to the serious purpose that I like to think lurks just beneath the surface of this book: explaining how to look a phony statistic in the eye and face it down; and no less important, how to recognize sound and usable data in that wilderness of fraud…
 >
@@ -38,7 +38,7 @@ I’ll walk through an adapted example that Huff uses to open Chapter 2: when yo
 
 <figure>
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/03/8d09e385-b2e9-49ef-9fcd-3a8e61d41786.jpeg?w=990)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/03/8d09e385-b2e9-49ef-9fcd-3a8e61d41786.jpeg?w=990)
 
 <figcaption>
 

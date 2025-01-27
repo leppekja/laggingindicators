@@ -1,9 +1,9 @@
 ---
 title: "Glove80 Keyboard Review (3 months)"
 date: "2024-02-14"
-categories: 
+categories:
   - "accessibility"
-tags: 
+tags:
   - "keyboard"
   - "reviews"
   - "technology"
@@ -21,7 +21,7 @@ So, I bought the Glove80. The following is what I think of it after using it for
 
 <figure>
 
-![Split keyboard on table](https://laggingindicators.blog/wp-content/uploads/2024/02/wp-17079185468896135575309647435760-621424026-e1707919125802.jpg?w=1024)
+![Split keyboard on table](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/wp-17079185468896135575309647435760-621424026-e1707919125802.jpg?w=1024)
 
 <figcaption>
 
@@ -41,7 +41,7 @@ The palm rest is only connected by two screws to the main frame of the keyboard.
 
 <figure>
 
-![Back of keyboard](https://laggingindicators.blog/wp-content/uploads/2024/02/wp-17079185466485152750548425569543-1064952101-e1707918946640.jpg?w=1024)
+![Back of keyboard](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/wp-17079185466485152750548425569543-1064952101-e1707918946640.jpg?w=1024)
 
 <figcaption>
 
@@ -59,7 +59,7 @@ I bought the Glove80 v2 just as it was being released, so it came with a carryin
 
 <figure>
 
-![Keyboard, case, and my laptop bag.](https://laggingindicators.blog/wp-content/uploads/2024/02/wp-17079185471334991641776735627763-587847866-e1707919219617.jpg?w=954)
+![Keyboard, case, and my laptop bag.](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/wp-17079185471334991641776735627763-587847866-e1707919219617.jpg?w=954)
 
 <figcaption>
 
@@ -71,7 +71,7 @@ Keyboard, case, and my laptop bag.
 
 <figure>
 
-![Cat on the Glove80 carrying case](https://laggingindicators.blog/wp-content/uploads/2024/02/wp-17079217753373872283243200568298-638665750-e1707921925778.jpg?w=920)
+![Cat on the Glove80 carrying case](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/wp-17079217753373872283243200568298-638665750-e1707921925778.jpg?w=920)
 
 <figcaption>
 
@@ -87,7 +87,7 @@ I don't like the LED lighting at all. I would say it's the worst part of the key
 
 <figure>
 
-![Keyboard with LEDs light up](https://laggingindicators.blog/wp-content/uploads/2024/02/wp-17079185472748957324214315950790-3002900536-e1707918965485.jpg?w=1024)
+![Keyboard with LEDs light up](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/wp-17079185472748957324214315950790-3002900536-e1707918965485.jpg?w=1024)
 
 <figcaption>
 
@@ -130,20 +130,22 @@ So to summarize, if you are interested in getting your first split keyboard, I w
 - After having pain in your hands, take a lot of time to identify where your hands feel the most comfortable. Where's the soreness in your fingers? On your wrist? Try to find that pose where you think your hands will be the most comfortable, and look for keyboards that would allow you to achieve that pose. This on its own rules out a lot of keyboards, and prepares you to think about how the rest of your set-up affects your comfort.
 
 - The size of your hands is something to consider, but companies don't provide much reassuring about it. It might be strange for people who are in the keyboards, but that was definitely a concern of mine, since I think I have smaller hands. For others, my measurements are as follows:
-    - finger lengths, measuring from the crease where my fingers first bend from my palm (right hand and left hand are equivalent (\*phew\*)):
-        - pinky 6.5cm,
-        
-        - index 7.7cm,
-        
-        - middle 8.3cm,
-        
-        - pointer 7.3cm.
-    
-    - From my wrist to the top of my middle finger is 19cm.
-    
-    - Laterally, palm down, fingers relaxed but straight, measuring across the back of my hand from the tip of my thumb to the edge of my pinky is about 14cm.
-    
-    - If I splay my fingers, the tip of my thumb to pinky is 21cm.
+
+  - finger lengths, measuring from the crease where my fingers first bend from my palm (right hand and left hand are equivalent (\*phew\*)):
+
+    - pinky 6.5cm,
+
+    - index 7.7cm,
+
+    - middle 8.3cm,
+
+    - pointer 7.3cm.
+
+  - From my wrist to the top of my middle finger is 19cm.
+
+  - Laterally, palm down, fingers relaxed but straight, measuring across the back of my hand from the tip of my thumb to the edge of my pinky is about 14cm.
+
+  - If I splay my fingers, the tip of my thumb to pinky is 21cm.
 
 - If your fingers are bright bigger than mine, then you should be fine with the Glove80. I'm not sure about other keyboards.
 

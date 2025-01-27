@@ -1,9 +1,9 @@
 ---
 title: "Using Observable Framework on Windows WSL and quickly deploying to GitHub Pages"
 date: "2024-02-16"
-categories: 
+categories:
   - "walkthrough"
-tags: 
+tags:
   - "coding"
   - "devops"
   - "git"
@@ -23,9 +23,9 @@ If you want to use it through WSL, then the following still applies. Fortunately
 
 Install [WSL from Powershell as described here](https://learn.microsoft.com/en-us/windows/wsl/install), or in the Windows Store, download Windows Subsystem for Linux and a preferred Linux distro. It looks like the latest offering is just named Ubuntu in the Windows store.
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/image.png?w=607)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/image.png?w=607)
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/image-1.png?w=614)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/image-1.png?w=614)
 
 Once you get Ubuntu from the App Store, if you don't use the command line version, you need to install the application. Just click on it from your Start Menu, and a terminal will guide you through the install process, setting up a username and password.
 
@@ -33,7 +33,7 @@ Note that you may need to enable WSL in the "Turn Windows Features on or off" me
 
 <figure>
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/image-3.png?w=336)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/image-3.png?w=336)
 
 <figcaption>
 
@@ -45,15 +45,15 @@ Check this box in the Turn Windows Features on or off menu
 
 In VSCode, you can easily open a "Remote Window" on the bottom left corner of the screen. See the green button below, with the >< signs. Clicking it will open up a menu. Note that you now have a menu at the top; just select Connect to WSL. If a error pops up saying that "no distro is found", then you need to ensure that it is installed, rather than just downloaded on your computer. The Powershell install manages this for you.
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/image-2.png?w=223)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/image-2.png?w=223)
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/image-4.png?w=1024)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/image-4.png?w=1024)
 
 Open a new terminal (View > Terminal). It should show up as `username@computername:~$`.
 
 From here, install Node. Here is the [Windows Dev guide](https://github.com/MicrosoftDocs/windows-dev-docs/blob/docs/hub/dev-environment/javascript/nodejs-on-wsl.md). Only one note: a `Could not resolve host: raw.githubusercontent.com` error may appear if you are connected to a VPN.
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/image-5.png?w=658)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/image-5.png?w=658)
 
 Once you can run `nvm ls` and see the above, you can install the [Observable Framework library following the Get Started documentation](https://observablehq.com/framework/getting-started).
 
@@ -67,7 +67,7 @@ Set up a remote repository (you may need to connect VSCode to git as well).
 
 As instructed in the Observable documentation, just run `npm run dev` and a server should start, and open to a new page in your browser, likely on 127.0.0.1:3000. You're set!
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/image-6.png?w=1024)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/image-6.png?w=1024)
 
 Now, deploying the static site to GitHub pages. The steps are very similar for any static site generator process.
 
@@ -85,7 +85,7 @@ git remote add origin https://github.com/user_name/repo_name.gitgit branch -M ma
 
 Verify that your site appears in GitHub. Go to Settings > Pages, and choose Build and deployment > GitHub Actions.
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/image-7.png?w=496)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/image-7.png?w=496)
 
 There is an example workflow called "Deploy static content to Pages." Click that, and a `static.yml` file should be created for you. The only edit to make here is editing the path argument from `.`, which is the whole repository, to `./dist`, which reflects you production files.
 

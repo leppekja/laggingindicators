@@ -1,7 +1,7 @@
 ---
 title: "Ridiculously Easy Origami Sunflowers (adapted)"
 date: "2024-02-15"
-tags: 
+tags:
   - "art"
   - "celebrate-sunflowers"
   - "crafts"
@@ -19,17 +19,17 @@ The choices to make origami sunflowers are few. I adapted the simple [Lotus Blos
 
 With the Blintz base, place a sheet of brown paper within the corner folds into the center.
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/20240215_125015.jpg?w=924)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/20240215_125015.jpg?w=924)
 
 It does not need to be large, but should be centered. The yellow paper will form an envelope around the sheet of brown paper. Fold the linked Lotus Blossom design above. On unfolding all of the center folds, the brown paper will be revealed, creating a sunflower-esque design.
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/1000006613.jpg?w=766)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/1000006613.jpg?w=766)
 
 Feel free to add a [simple stem](http://www.origami-instructions.com/easy-origami-tulip.html) as described at the end of this tutorial, or glue them flat against a scrapbook.
 
 <figure>
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/02/1000006614.jpg?w=527)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/02/1000006614.jpg?w=527)
 
 <figcaption>
 

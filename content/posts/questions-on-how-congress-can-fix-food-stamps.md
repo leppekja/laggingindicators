@@ -1,10 +1,10 @@
 ---
 title: "Questions on “How Congress Can Fix Food Stamps”"
 date: "2024-09-22"
-categories: 
+categories:
   - "review"
   - "snap-benefits"
-tags: 
+tags:
   - "food-access"
   - "news"
   - "snap"
@@ -14,7 +14,7 @@ The [National Review](https://www.nationalreview.com/) in July published a short
 
 However, Adolphsen fails to demonstrate key assumptions in his ideologically-driven thesis: do work requirements actually give Americans an opportunity to no longer live in poverty? Is "moving \[people\] from welfare to work" an effective way to lower poverty?
 
-To be clear, the essay doesn't spend any time focusing on policies that achieve an outcome where families are [highly food secure](https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/definitions-of-food-security/). In his own words, "Republican's top priority should be reining in this out-of-control welfare program," referring to the high cost and enrollment. He uses the word “crisis” to describe the $110 billion plus cost per year forecasted for 2024 to 2034 (since revised, see footnote), the fact that [an average of 42 million people monthly participated in SNAP in FY 2023](https://www.ers.usda.gov/topics/food-nutrition-assistance/supplemental-nutrition-assistance-program-snap/key-statistics-and-research/#:~:text=In%20FY%202023%2C%20SNAP%20served,%24211.93%20per%20participant%20per%20month.&text=2100%2C%20144%20dpi\)-,Download%20chart%20data%20in%20Excel%20format.,FY%202023%20was%2012.6%20percent.), and that two-thirds of able-bodied adults without dependents (ABAWDs) are not working.[1](#fb44cb59-7c74-431f-af59-adc7f30e39ad)
+To be clear, the essay doesn't spend any time focusing on policies that achieve an outcome where families are [highly food secure](https://www.ers.usda.gov/topics/food-nutrition-assistance/food-security-in-the-u-s/definitions-of-food-security/). In his own words, "Republican's top priority should be reining in this out-of-control welfare program," referring to the high cost and enrollment. He uses the word “crisis” to describe the $110 billion plus cost per year forecasted for 2024 to 2034 (since revised, see footnote), the fact that [an average of 42 million people monthly participated in SNAP in FY 2023](<https://www.ers.usda.gov/topics/food-nutrition-assistance/supplemental-nutrition-assistance-program-snap/key-statistics-and-research/#:~:text=In%20FY%202023%2C%20SNAP%20served,%24211.93%20per%20participant%20per%20month.&text=2100%2C%20144%20dpi)-,Download%20chart%20data%20in%20Excel%20format.,FY%202023%20was%2012.6%20percent.>), and that two-thirds of able-bodied adults without dependents (ABAWDs) are not working.[1](#fb44cb59-7c74-431f-af59-adc7f30e39ad)
 
 A generous interpretation is that he believes that getting participants eligible to work into training or employment programs means they won’t live in poverty any longer. But [having a job does not mean making enough to live](https://www.bls.gov/opub/reports/working-poor/2020/home.htm). Cynically, however, I feel that the opinion piece is dismissive of this, discussing reforms born from a desire to cut costs, rather than proposing changes that would assist the Americans who rely on SNAP benefits. And while I do believe there is a place in critical discourse for both approaches, Adolphsen’s essay could have done a bit more to highlight root causes, rather than just the costs, of high SNAP participation.
 
@@ -33,7 +33,7 @@ In the aftermath of the COVID-19 pandemic, we undoubtedly are spending more on S
 I[n 2019, the average monthly SNAP participation was about 35 million people; in 2023, that number was up to just over 42 million](https://fns-prod.azureedge.us/sites/default/files/resource-files/snap-annualsummary-8.pdf) driven by the global crisis that saw unemployment and food costs soar. By design, the costs of SNAP will decrease or increase when the U.S. economy is doing better or worse, respectively. In December 2020, roughly [30 million adults reported](https://www.cbpp.org/research/poverty-and-inequality/tracking-the-covid-19-recessions-effects-on-food-housing-and) they did not have enough to eat over the last 7 days; a [recent USDA report](https://www.ers.usda.gov/publications/pub-details/?pubid=109895) found that food insecurity has continued to rise since 2021. As of 2024, grocery prices [have not fallen to pre-2020 levels](https://www.bls.gov/charts/consumer-price-index/consumer-price-index-average-price-data.htm) (and [they aren't expected](https://www.nytimes.com/2024/08/13/business/economy/inflation-food-prices.html) to), and the unemployment rate (after falling from its spike during government shutdowns in 2020 by mid-2022) [is creeping back up](https://www.bls.gov/charts/employment-situation/civilian-unemployment-rate.htm#). As the [USDA Economic Research Service’s Key Statistics page](https://www.ers.usda.gov/topics/food-nutrition-assistance/supplemental-nutrition-assistance-program-snap/key-statistics-and-research/) points out,
 
 > Historically, SNAP spending and the participation rate tend to track the unemployment rate and poverty rate…
-> 
+>
 > A 1-percentage point increase in the unemployment rate is associated with an additional 2 million–3 million additional SNAP participants. Changes in program policy and administrative practices tend to augment the rise in SNAP participation during economic downturns and contribute to the continued rise in participation during the early stages of economic recovery.
 
 Notably, [the source study](https://www.ers.usda.gov/publications/pub-details/?pubid=43668) only uses data from 1976-2010, so I would be curious to see an updated version of this. Additionally, an [overview article from the Pew Research Center](https://www.pewresearch.org/short-reads/2023/07/19/what-the-data-says-about-food-stamps-in-the-u-s/) indicates that increased food stamp never returned to pre-2008 levels after the Great Recession.[2](#60c40db7-f960-4df0-a355-ed6073314c39) I would like to see a study about recovery, e.g., how long would it take to return to pre- crisis levels of SNAP enrollment. However, I don't see any clear evidence that continued high levels on SNAP participation are abnormal. I think the article could do a better job of addressing this and provide better insight on how SNAP participation adjusts after social crises.
@@ -50,12 +50,12 @@ A key point to note is that this TFP reevaluation, unlike previous times, was **
 
 In a [Fact Sheet released by the Biden Administration](https://www.whitehouse.gov/briefing-room/statements-releases/2021/01/22/fact-sheet-president-bidens-new-executive-actions-deliver-economic-relief-for-american-families-and-businesses-amid-the-covid-19-crises/), it notes:
 
-> Therefore, as directed by the 2018 Farm Bill, the President will ask USDA to consider beginning the process of revising the Thrifty Food Plan to better reflect the modern cost of a healthy basic diet. 
+> Therefore, as directed by the 2018 Farm Bill, the President will ask USDA to consider beginning the process of revising the Thrifty Food Plan to better reflect the modern cost of a healthy basic diet.
 
 This memo was released January 22, 2021. Yet the TFP 2021 report states that “the process to update the Thrifty Food Plan began several years ago…”[4](#8bcce965-b0ae-4921-8c6c-bf3988bd6558) The TFP 2021 report only notes President Biden’s contributions in two places (in a 125 page report):
 
 > President Joseph R. Biden committed via Executive Order 14002 to prioritize the review.[5](#7f4f4ff4-7885-415d-84ac-f057f47b8ab2)
-> 
+>
 > President Joseph R. Biden emphasized the commitment to the reevaluation in Executive Order 14002 on January 22, 2021.[6](#1cad0cf9-327c-497d-9cb9-969c30acb2f6)
 
 The [cited Executive Order 14002](https://www.govinfo.gov/app/details/DCPD-202100078) is incredibly vague, and the TFP reevaluation had to be completed by 2022 anyway. Here is a New York Times article framing the TFP update positively for the Democrats, [Biden Administration Prompts Largest Permanent Increase In Food Stamps](https://archive.ph/BdRyf), yet goes on to note that Biden’s only contribution was to “\[urge\] the department to speed up the process,” which happened about 10 months until the report was due anyway. Plus, the Secretary of Agriculture at the time, Tom Vilsack, is quoted goading Republicans: “‘A majority of Republicans in the Senate and House voted for this,’ Mr. Vilsack said. ‘They deserve credit.’”
@@ -63,7 +63,7 @@ The [cited Executive Order 14002](https://www.govinfo.gov/app/details/DCPD-20210
 Apparently Republicans did not realize that what they were voting for allowed the USDA to drop the cost-neutral requirement. The same New York Times article states:
 
 > In allowing the plan’s value to rise, officials argued they were following the 2018 law, which required new standards but did not specify whether costs should stay the same...
-> 
+>
 > But as hints of the benefit increase spread last week, Republicans pushed back. Former Representative Mike Conaway, a Republican and chief author of the 2018 law, said it was written “assuming the precedent of cost-neutrality would be followed” and warned the administration against “unilateral overreach.”
 
 So this may have just been a poorly-written law. It is also hard to know to what extent this was debated internally, e.g., was this a ‘loophole’ that the evaluators took advantage of, or was this the widely accepted interpretation of the law at the time of writing in the USDA? I would be very interested in learning more about who identified this and the process internally to come to these conclusions.
@@ -86,7 +86,7 @@ While he did not provide a source or context, I found [reports from the Kansas D
 
 <figure>
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/09/image.png?w=1024)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/09/image.png?w=1024)
 
 <figcaption>
 
@@ -100,7 +100,7 @@ On page 15, there is a SNAP Work Programs (GOALS) table, which is confusing, as 
 
 <figure>
 
-![](https://laggingindicators.blog/wp-content/uploads/2024/09/image-1.png?w=957)
+![](https://laggingindicators.wordpress.com/wp-content/uploads/2024/09/image-1.png?w=957)
 
 <figcaption>
 
@@ -116,7 +116,7 @@ So, I'm not quite able to pinpoint what exactly Adolphsen is measuring. The numb
 
 Similarly, I found next to nothing on the impact of Idaho's changes. This is [despite the Governor "urging caution" and recommending that legislators "closely monitor the impacts.](https://blog.idahoreports.idahoptv.org/2023/04/04/governor-signs-snap-work-requirement-bill-but-urges-caution/)" I see some news articles on Louisiana's enforcement; here, [15,000 recipients lost benefits in the summer of '24](https://thelensnola.org/2024/07/16/15k-louisianans-lose-food-stamps-due-to-reinstated-federal-work-requirements/). Again, the article mentions the department "has no information about the 15,000 people who were disenrolled since the fall and whether they have found employment, or what sort of wages they are earning if they did, a spokesperson said." This is surprising to me that the state did not take the chance to follow up to identify outcomes, but again, the critic in me feels that this demonstrates that legislators thought whether people were successful in finding quality jobs was secondary to the true purpose of the legislation: to just decrease participation in SNAP. Again, [data (collected and pushed by the FGA) doesn't actually show any clear successes](https://thelensnola.org/2024/04/12/thousands-of-food-stamp-recipients-may-face-more-strict-work-requirements/).[13](#924ec7d4-c812-4316-ab6f-58488705b111)
 
-In the second to last paragraph, the author claims that work requirements for SNAP benefits are “wildly popular,” noting that “80 percent of swing-state Wisconsin voters cast a ballot in favor of welfare work requirements,” without linking to any background on the measure.[14](#17420982-fac4-4acc-bd1c-7ceb3fbe9fab) [Checking Ballotpedia shows](https://ballotpedia.org/Wisconsin_Question_3,_Work_Requirement_for_Welfare_Benefits_Advisory_Question_\(April_2023\)) that “casting a ballot...” really meant less than 2 million people answered a vague advisory question that was not legally binding. The question in full: “shall able-bodied, childless adults be required to look for work in order to receive taxpayer-funded welfare benefits?” The Wisconsin State Journal, which advised voting yes, also recognized the lack of merit in the question, stating: "[the question is too cute by half in seeking to manufacture outrage](https://madison.com/opinion/editorial/our-view-roll-your-eyes-if-you-have-to-but-vote-yes-on-statewide-referendums/article_a8b7fbfa-22c6-5c7a-a341-34a6021d327a.html)." I don't think saying it was a question designed to be manipulated as a marketing tool is out of line.
+In the second to last paragraph, the author claims that work requirements for SNAP benefits are “wildly popular,” noting that “80 percent of swing-state Wisconsin voters cast a ballot in favor of welfare work requirements,” without linking to any background on the measure.[14](#17420982-fac4-4acc-bd1c-7ceb3fbe9fab) [Checking Ballotpedia shows](<https://ballotpedia.org/Wisconsin_Question_3,_Work_Requirement_for_Welfare_Benefits_Advisory_Question_(April_2023)>) that “casting a ballot...” really meant less than 2 million people answered a vague advisory question that was not legally binding. The question in full: “shall able-bodied, childless adults be required to look for work in order to receive taxpayer-funded welfare benefits?” The Wisconsin State Journal, which advised voting yes, also recognized the lack of merit in the question, stating: "[the question is too cute by half in seeking to manufacture outrage](https://madison.com/opinion/editorial/our-view-roll-your-eyes-if-you-have-to-but-vote-yes-on-statewide-referendums/article_a8b7fbfa-22c6-5c7a-a341-34a6021d327a.html)." I don't think saying it was a question designed to be manipulated as a marketing tool is out of line.
 
 Again, studies that have looked at this find [very little evidence](https://www.brookings.edu/articles/a-primer-on-snap-work-requirements/) that work requirements lead to stable, well-paying jobs. An [NBC News report compiled 12 studies](https://www.nbcnews.com/politics/politics-news/foundation-government-accountability-debt-ceiling-food-stamps-snap-rcna81369), and all reviewed found decreased SNAP enrollment while 50% found no impact on employment, 25% found mixed to mostly none, and 25% found positive effects.
 
