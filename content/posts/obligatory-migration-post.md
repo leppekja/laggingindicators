@@ -1,11 +1,10 @@
 ---
 title: "Obligatory Migration Post from Wordpress to Hugo"
 date: "2025-1-26"
-tags: 
+tags:
   - "coding"
   - "personal-projects"
-  - "research"
-  draft: true
+draft: true
 ---
 
 This is the obligatory switching blog from Wordpress to a different blogging solution article.
