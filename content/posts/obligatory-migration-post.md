@@ -4,12 +4,12 @@ date: "2025-01-26"
 tags:
   - "coding"
   - "personal-projects"
-draft: true
+draft: false
 aliases:
   - ../../2025/01/26/obligatory-migration-post
 ---
 
-This is the obligatory switching blog from Wordpress to a different blogging solution article.
+This is the obligatory moved blog from one framework to a different framework article.
 
 Wordpress.com asked me for $78 for a two year subscription. However, I dislike the mobile app and the text editing experience online. I also had difficulties editing any part of the website with the in-browser tools. Originally, I signed up because I wanted my focus to be on writing, rather than on coding, a blog. Simply purchasing the Wordpress plan let me test whether or not I wanted to keep up with writing posts at all. It did that, but I didn't find that WordPress provided much additional value.
 
@@ -46,5 +46,6 @@ So my list of regrets so far:
 
 To do:
 
-- fix images in articles based on new path
-- bring over footnotes to articles.
+- [ ] fix images in articles based on new path
+- [ ] bring over footnotes to articles.
+- [x] update URLS.
