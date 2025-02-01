@@ -7,6 +7,8 @@ tags:
   - "coding"
   - "personal-projects"
   - "research"
+aliases:
+  - ../../2024/02/12/monday-links
 ---
 
 \- Whenever I do analyses I am nervous about being wrong, but using Excel's [autofill function to impute data](https://retractionwatch.com/2024/02/05/no-data-no-problem-undisclosed-tinkering-in-excel-behind-economics-paper/) would have definitely been on my "this is not correct to do," at the very least.

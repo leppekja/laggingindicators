@@ -1,16 +1,18 @@
 ---
 title: "My UChicago MSCAPP Application Essay Answers (2018)"
 date: "2024-04-17"
-categories: 
+categories:
   - "personal"
-tags: 
+tags:
   - "creative-writing"
   - "grad-school"
+aliases:
+  - ../../2024/04/16/my-uchicago-mscapp-application-essay-answers-2018
 ---
 
 These were my answers to the application essay questions for [UChicago's MSCAPP program](https://capp.uchicago.edu/) back from the 2018 round. Only piece of advice - make sure you know what skills or knowledge you want to get out of any MS program - which means work for a bit prior to attending.
 
-* * *
+---
 
 _Why is a combined program between policy and computer science a good match for your career goals? (max 300 words)_
 
@@ -20,7 +22,7 @@ A combined program in computer science and policy is the perfect opportunity to 
 
 Rather than attend a master’s program that simply reinforces my strengths, the MS-CAPP is an intellectual challenge that provides me with tools to expand my limited experience with computer science and statistical analysis. Building on my economics experience and online courses on Python, linear algebra, and data science, I am ready for instruction on more advanced techniques and their applications. Overall, while my background will necessitate a disciplined approach to higher-level courses, my unique perspective will teach me to effectively communicate complex concepts to nonprofit professionals and mitigate the severe technical skills gap of the nonprofit sector.
 
-* * *
+---
 
 _Describe briefly the biggest challenge you have ever faced. How did you tackle it and what did you learn? (max 300 words)_
 
@@ -32,7 +34,7 @@ Being challenged to pay for my undergraduate education taught me two lessons: on
 
 As nonprofit professionals, our role is to minimize ourselves and work for others. To silence the voices in the back of our heads that doubt our strengths and indulge our weaknesses. The voice that wraps itself in layers of pride and power until it reifies itself as me. Part of me still wants to believe that my hard work earned what I have. Yet this experience reminds me that whatever I am, if anything, isn’t worth as much as what’s around me.
 
-* * *
+---
 
 _Where do you see yourself getting involved in the community during your time at Harris--either at the University of Chicago or in the city of Chicago? \[Optional, max 300 words\]_
 

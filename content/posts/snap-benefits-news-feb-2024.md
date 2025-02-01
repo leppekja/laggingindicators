@@ -12,6 +12,8 @@ tags:
   - "food-insecurity"
   - "news"
   - "poverty"
+aliases:
+  - ../../2024/03/02/snap-benefits-news-feb-2024
 ---
 
 The following is a curated list of news articles by U.S. state and nationally that discussed SNAP benefits in February 2024.

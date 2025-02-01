@@ -6,6 +6,8 @@ categories:
   - "project"
 tags: 
   - "technology"
+aliases:
+  - ../../2024/09/14/from-a-mouse-to-a-trackball
 ---
 
 I recently bought the Kensington Slimblade Trackball to replace the Logitech MX Master mouse that I have been using for the last year. This is the first time that I've used a trackball. A couple of thoughts worth noting that are either omitted from or in conflict with other reviews:

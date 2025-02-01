@@ -8,6 +8,8 @@ tags:
   - "food-access"
   - "news"
   - "snap"
+aliases:
+  - ../../2024/09/21/questions-on-how-congress-can-fix-food-stamps
 ---
 
 The [National Review](https://www.nationalreview.com/) in July published a short opinion piece in July ‘24 entitled [How Congress Can Fix Food Stamps](https://archive.ph/RcWdh). Sam Adolphsen, the author, argues that the cost of SNAP benefits is too high. He comments that "about 17.6 million food-stamp recipients are able-bodied adults, and about two-thirds don't work," which leads him to list a series of Republican-led, state-level policies that require SNAP recipients to participate in job training or employment programs. These policy decisions, Adolphsen argues throughout the article, are "common-sense", "wildly popular among voters", "turning a handout into the hand up that \[SNAP benefits were\] always supposed to be," and are "protecting taxpayers while promoting work over welfare".

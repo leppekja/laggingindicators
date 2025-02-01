@@ -10,6 +10,9 @@ tags:
   - "politics"
   - "poverty"
   - "snap-benefits"
+aliases:
+  - ../../2024/04/03/snap-benefits-news-march-2024
+  - ../../2024/04/02/snap-benefits-news-march-2024
 ---
 
 Summary:
@@ -154,6 +157,7 @@ If the first linked article is right, and Massachusetts is the first state to ex
 ### Ohio
 
 - ['A failure of government': As food-stamp theft soars in Lorain, experts say urgent help is needed](https://www.news5cleveland.com/news/local-news/we-follow-through/a-failure-of-government-as-food-stamp-theft-soars-in-lorain-experts-say-urgent-help-is-needed)
+
   - Local story emphasizing the need for better cybersecurity for EBT payments.
 
   - The article notes that California is upgrading these cards to chip-based payments at its own cost.

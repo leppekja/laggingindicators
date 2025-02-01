@@ -8,6 +8,8 @@ tags:
   - "mathematics"
   - "statistics"
   - "technology"
+aliases:
+  - ../../2024/04/03/the-cartoon-guide-to-statistics
 ---
 
 Written by [Larry Gonick](https://www.larrygonick.com/titles/science/the-cartoon-guide-to-statistics/) & Woollcott Smith

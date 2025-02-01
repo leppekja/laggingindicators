@@ -9,6 +9,8 @@ tags:
   - "fraud"
   - "news"
   - "politics"
+aliases:
+  - ../../2024/04/09/a-response-to-why-we-should-rethink-the-snap-interview-requirement-a-former-caseworkers-perspective
 ---
 
 ---

@@ -4,6 +4,9 @@ date: "2024-03-04"
 tags:
   - "book-review"
   - "statistics"
+aliases:
+  - ../../2024/03/04/how-to-lie-with-statistics
+  - ../../2024/03/03/how-to-lie-with-statistics
 ---
 
 Written by Darrell Huff and illustrated by Irving Geis. Originally published in 1954.

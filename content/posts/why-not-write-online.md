@@ -1,14 +1,17 @@
 ---
 title: "Why (not) write online?"
 date: "2024-04-28"
-categories: 
+categories:
   - "personal"
-tags: 
+tags:
   - "blogging"
   - "creative-writing"
   - "curious"
   - "essay-writing"
   - "writing"
+
+aliases:
+  - ../../2024/04/28/why-not-write-online
 ---
 
 a) improve communication skills by forcing myself to formalize an opinion. Feedback from anonymous readers may either point out an error I made while translating what I think to a written document or a flaw in the argument itself. Of course, I need to be willing to be wrong, and reminding myself that I am excited about learning is an powerful way to cope with finding errors in my work. Writing online is a low-barrier opportunity to become comfortable with this.
@@ -17,7 +20,7 @@ b) Document and share a learning process. I benefit from in-depth tutorials, qui
 
 c) Complement traditional forms of outreach. I would not make a decision to join a team on a 30 minute interview. Having more information on how someone approaches a problem, their interests, and a regular commitment to a project is evidence that normally wouldn't be available about whether we would work well together. This hopefully translates to a better fit for future jobs, and at the very least demonstrates my knowledge and capabilities better than a resume does.
 
-* * *
+---
 
 _a_ _response to_
 
@@ -27,7 +30,7 @@ b) This is reasonable, but I need to impose reasonable limits on contributions o
 
 c) A potential employer may be just as likely to use this additional information against me. Even assuming I don’t post or link to objectionable topics, they may disagree with a position I take in opinionated pieces. Mixing professional-facing articles with personal pieces may not be what a company wants, and they may not want to work with individuals who maintain an online presence at all. And while I agree that public-facing work is evidence for what you say you can do, isn’t it almost a given that traditional hiring pipelines will still force their own tests for a applicant’s knowledge?
 
-* * *
+---
 
 _a follow-up to_
 
@@ -37,7 +40,7 @@ b) Online content is dominated by low-effort material. Continuing a tradition of
 
 c) Separating professional and personal commentary isn’t a bad idea, and it is fair to clarify that my writing isn’t on behalf of any organization on professional articles. But am guessing that the networking value of maintaining a up-to-date online presence is greater than then potential opportunities lost by it. If an organization is that controlling that I couldn’t express my thoughts online, then I likely wouldn’t want to work for them, unless there are extenuating circumstances, e.g., government roles or something similar. To the last point about still passing specific knowledge checks - that’s true, early on at least, but as a person’s reputation as an expert is demonstrated, these might not be needed.
 
-* * *
+---
 
 _a response to_
 
@@ -47,7 +50,7 @@ b) Settled, then.
 
 c) Tagging content by category, perhaps, or separate pages for work and personal topics. But I should take note to avoid over sharing, or limit personal posts to only those which have value outside of the sharing in itself. For example, a criterion such as: what are personal experiences or lessons that hold instructive value?
 
-* * *
+---
 
 _a follow-up to_
 
@@ -59,7 +62,7 @@ b) And a last note for myself - I do frequently benefit from advice that people 
 
 c) This is reasonable. I should ask myself each time I post: why should a piece of content be shared? What about a piece of writing deserves attention from others? This post even, an argument with myself, perhaps should be meant only for myself. And yet, seeing the state of online discourse, I think more people should consider how what they share affects other people. What motivates other people to post online?
 
-* * *
+---
 
 _a response to_
 

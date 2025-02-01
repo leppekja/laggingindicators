@@ -6,6 +6,8 @@ categories:
 tags: 
   - "coding"
   - "voice-access"
+aliases:
+  - ../../2024/02/08/ill-be-back-babe-no-baby
 ---
 
 In the past six months I've started to have finger, wrist, and forearm pain. I previously was using the Logitech Mx Mouse and keyboard for business. But due to the pronation of my wrists I wasn't able to type at all without experience severe pain that would continue through the evening. so recently I've been using the Windows voice axis. To try and perform as much typing and as many actions on the computer as I can. This post Is entirely written using my voice. And as you can I sit I'm still having trouble making this a usable tool.

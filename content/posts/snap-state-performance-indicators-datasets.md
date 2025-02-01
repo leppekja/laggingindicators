@@ -7,6 +7,8 @@ tags:
   - "analytics"
   - "data"
   - "project"
+aliases:
+  - ../../2024/02/21/snap-state-performance-indicators-datasets
 ---
 
 I started to post [SNAP performance indicators](https://www.fns.usda.gov/snap/efficiency-effectiveness-measures) from the USDA in machine-readable format, aggregating and cleaning the data from the many PDF tables. [This repository](https://github.com/leppekja/SNAP-performance-indicators) includes quick-access to cleaned, FIPS-linked CSV long-format tables of yearly state reported indicators for [Application Processing Timeliness](https://www.fns.usda.gov/snap/qc/timeliness), [Program Error Rates](https://www.fns.usda.gov/snap/qc/per), and [Case and Procedural Error Rates](https://www.fns.usda.gov/snap/qc/caper) (coming soon).

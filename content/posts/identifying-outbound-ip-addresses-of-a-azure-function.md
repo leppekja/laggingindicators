@@ -1,10 +1,12 @@
 ---
 title: "Identifying outbound IP addresses of a Azure Function"
 date: "2024-05-01"
-tags: 
+tags:
   - "analytics"
   - "coding"
   - "data-engineering"
+aliases:
+  - ../../2024/04/30/identifying-outbound-ip-addresses-of-a-azure-function
 ---
 
 Here is [Microsoft's documentation page on the topic](https://learn.microsoft.com/en-us/azure/azure-functions/ip-addresses?tabs=portal). The only reason I am documenting this is because the Azure Resource Explorer failed to load consistently across devices for me. Some tutorials I found, like [this one](https://rubberduckdev.com/app-outbound-ip/), seem to be outdated and the outbound IP addresses weren't listed in any Properties menu in the Function App in the Azure Portal. The Azure CLI method was what worked for me:

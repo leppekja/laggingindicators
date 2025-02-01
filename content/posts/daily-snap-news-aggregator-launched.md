@@ -7,6 +7,8 @@ tags:
   - "coding"
   - "project"
   - "snap"
+aliases:
+  - ../../2024/06/11/daily-snap-news-aggregator-launched
 ---
 
 Site is [accessible here](https://leppekja.github.io/snap_news/), and the accompanying GitHub repository can be accessed through that site as well. It is based on a Google Alerts RSS feed, built every ~6 hours with Jekyll and GitHub Actions.

@@ -10,6 +10,8 @@ tags:
   - "sustainable-tourism"
   - "tourism"
   - "travel"
+aliases:
+  - ../../2024/02/23/all-my-cultural-tourism-is-commercial-exchanges
 ---
 
 I recently went on a weekend trip, where I counted each time that I interacted with a person who was a citizen of the country I was visiting. I did not include any interactions with individuals at the airport prior to landing at the destination, nor once I reached the airport to return. Non-verbal interactions were not considered, e.g., making room for someone on the sidewalk, or gesturing for a car to go first at an intersection.

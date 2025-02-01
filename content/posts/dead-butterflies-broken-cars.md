@@ -5,6 +5,8 @@ categories:
   - "living-abroad"
 tags: 
   - "creative-writing"
+aliases:
+  - ../../2024/02/11/dead-butterflies-broken-cars
 ---
 
 227 vehicles have passed by us in the last hour. We are parked on the side of the road, in a car that is leaking oil. At least the hood has stopped smoking. Our two friends left in a taxi to Taluca, the closest town, to see a mechanic and have a grua tow us either to the town, or back all the way to Mexico City.  

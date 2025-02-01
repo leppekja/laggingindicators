@@ -5,6 +5,8 @@ categories:
   - "food"
 tags: 
   - "curious"
+aliases:
+  - ../../2024/02/11/theres-a-stone-in-my-lentils
 ---
 
 For the first time, in my many years of eating lentils, I found a small stone in my lentils while I was eating the curry. It was slightly smaller than a single lentil.

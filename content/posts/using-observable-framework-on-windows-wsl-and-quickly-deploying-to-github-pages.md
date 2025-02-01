@@ -13,6 +13,8 @@ tags:
   - "project"
   - "tutorial"
   - "windows"
+aliases:
+  - ../../2024/02/16/using-observable-framework-on-windows-wsl-and-quickly-deploying-to-github-pages
 ---
 
 If you've got [the framework](https://github.com/observablehq/framework) installed, and just want to deploy the static pages, [skip to below](#deploying). Note - my first time doing this, but it works. You can always deploy directly to Observable.

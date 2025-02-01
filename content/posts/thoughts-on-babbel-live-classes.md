@@ -1,18 +1,21 @@
 ---
 title: "Thoughts on Babbel Live Classes"
 date: "2024-02-20"
-categories: 
+categories:
   - "living-abroad"
   - "review"
-tags: 
+tags:
   - "babbel-live"
   - "language-learning"
   - "spanish"
+aliases:
+  - ../../2024/02/20/thoughts-on-babbel-live-classes
+  - ../../2024/02/19/thoughts-on-babbel-live-classes
 ---
 
 I took about 70 classes over a one-year unlimited class subscription with [Babbel Live](https://www.babbel.com/live) for Spanish from mid-2022 to 2023. My level was beginner to low intermediate over the course of the year, and I only took classes in the A1, A2, and B1 range. Prior to the classes, I was working with [Anki flashcards](https://apps.ankiweb.net/) and [Duolingo](https://www.duolingo.com/) lessons. What follows are some thoughts I had wrote down while taking the courses. **Some aspects of the course may have changed since I took them.**
 
-For those who haven’t looked into Babbel Live, the classes are online and slides-based, with up to 6 students and a single instructor. You can book up to a few minutes in advance. They run for about 55 minutes.  
+For those who haven’t looked into Babbel Live, the classes are online and slides-based, with up to 6 students and a single instructor. You can book up to a few minutes in advance. They run for about 55 minutes.
 
 ### Class Activities
 

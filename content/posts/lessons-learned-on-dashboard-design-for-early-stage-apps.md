@@ -5,6 +5,8 @@ categories:
   - "data-visualization"
 tags: 
   - "analytics"
+aliases:
+  - ../../2024/09/07/lessons-learned-on-dashboard-design-for-early-stage-apps
 ---
 
 What follows are a few takeaways from a recent app launch, where I had some successes and some things I had to fix. I also maintain dashboards for a wide set of clients on a different project that will be overhauled soon, and would like to apply these learnings during the redesign.

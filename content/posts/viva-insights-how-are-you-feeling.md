@@ -5,6 +5,8 @@ categories:
   - "review"
 tags:
   - "windows"
+aliases:
+  - ../../2024/03/02/viva-insights-how-are-you-feeling
 ---
 
 Microsoft Teams provides an integration with Microsoft Viva, which schedules daily check-ins to record your perception of your mental state. Once a day, at 4pm, I get a notification that asks me to select one of five emojis that reflects how I feel.

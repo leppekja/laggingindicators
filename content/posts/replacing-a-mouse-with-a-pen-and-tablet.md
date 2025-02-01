@@ -10,6 +10,8 @@ tags:
   - "tablet"
   - "technology"
   - "writing"
+aliases:
+  - ../../2024/04/22/replacing-a-mouse-with-a-pen-and-tablet
 ---
 
 These are some thoughts about using a [Wacom Intuos Wireless Pen and Tablet](https://estore.wacom.com/en-us/wacom-intuos-s-bluetooth-black-us-ctl4100wlk0.html) to complement a mouse and keyboard over the past few weeks. I made this purchase in an effort to decrease forearm and finger pain from overuse working at a desk. Previously, I've been using the Logitech MX Master 3 For Business mouse, and I was hoping that switching to a pen and tablet would limit some of the forearm rotation that was causing me pain. While I put the mouse to the side, I am still using a Glove80 keyboard, as well as Windows Voice Access.

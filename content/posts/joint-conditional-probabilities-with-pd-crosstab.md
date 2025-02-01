@@ -4,6 +4,8 @@ date: "2024-05-02"
 tags: 
   - "analytics"
   - "coding"
+aliases:
+  - ../../2024/05/02/joint-conditional-probabilities-with-pd-crosstab
 ---
 
 `pd.crosstab` is one of those built-in functions in the Pandas API that I forget about routinely. I instinctively reached for `df.groupby('x')['y'].count().unstack()`, but when I wanted to normalize the values, it takes [more and more steps](https://stackoverflow.com/questions/37818063/how-to-calculate-conditional-probability-of-values-in-dataframe-pandas-python) to get where I wanted.

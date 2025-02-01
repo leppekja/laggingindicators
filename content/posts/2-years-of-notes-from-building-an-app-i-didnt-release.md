@@ -1,14 +1,16 @@
 ---
 title: "2 years of notes from building an app I didn't release"
 date: "2024-11-25"
-categories: 
+categories:
   - "personal"
-tags: 
+tags:
   - "coding"
   - "programming"
   - "project"
   - "technology"
   - "web-development"
+aliases:
+  - ../../2024/11/24/2-years-of-notes-from-building-an-app-i-didnt-release
 ---
 
 Close to 2 years ago, I had an idea for a mobile application that allowed users to store, submit, and manage tax reimbursements in foreign countries. For 2 years ago, I on and off worked on this idea and had a functioning version on my phone - and for nearly all that time, I never felt like the application was ready to release to potential users - and it doesn't look like I'll ever get it there.
@@ -71,11 +73,11 @@ I had to re-run `flutter pub add firebase_core`.
 
 I keep getting a
 
-    `Building with plugins requires symlink support. Please enable Developer Mode in your system settings. Run start ms-settings:developers to open settings.`
+`Building with plugins requires symlink support. Please enable Developer Mode in your system settings. Run start ms-settings:developers to open settings.`
 
 error. No idea what `symlink` is at all.
 
-At this point, the imports fore firebase\_core and firebase\_options are no longer marked as errors, but `FirebaseDatabase` class still is tagged as undefined. I thought it was an error and restarted VSCode, then I realized I didn't actually bring over the import for the Firebase RealTime database because I decided to implement the basic authentication module first. My bad.
+At this point, the imports fore firebase_core and firebase_options are no longer marked as errors, but `FirebaseDatabase` class still is tagged as undefined. I thought it was an error and restarted VSCode, then I realized I didn't actually bring over the import for the Firebase RealTime database because I decided to implement the basic authentication module first. My bad.
 
 I ran `dart fix` again. I don't know why. I thought I just ran it. But it asked me too, so that's that.
 
@@ -103,11 +105,11 @@ I had been away on vacation for 2 weeks. I hadn't worked on this app for probabl
 
 1. Try to run the project. See what happens.
 
-3. Run anything that the IDE asks you to run. E.g., `dart fix`. I swear I get this message every time I open VSCode.
+2. Run anything that the IDE asks you to run. E.g., `dart fix`. I swear I get this message every time I open VSCode.
 
-5. Focus on the part you think you remember doing last and spend more time understanding that section than anything else.
+3. Focus on the part you think you remember doing last and spend more time understanding that section than anything else.
 
-7. Make a minor, completely unrelated change that is almost worthless, e.g., adjust the padding on something, just to see if you remember how to commit a change. This will also feel like quick progress.
+4. Make a minor, completely unrelated change that is almost worthless, e.g., adjust the padding on something, just to see if you remember how to commit a change. This will also feel like quick progress.
 
 I previously think I was working on the Google Firebase integration, so restarting work there first. I also set a goal. By the end of July, have a publishable app that allows users to log in and store their organization tax information. This is the information that the store will ask you for when you try to generate a reimbursment. I already have the major parts of this, but I want to polish it and ensure it works, and publish it (at least informally).
 
@@ -123,7 +125,7 @@ I switched to [a Google Codelab](https://firebase.google.com/codelabs/firebase-g
 
 I ran into this error:
 
-    `: Error: Too many positional arguments: 1 allowed, but 2 found firebase_auth_web.dart:94 Try removing the extra positional arguments.`       
+`: Error: Too many positional arguments: 1 allowed, but 2 found firebase_auth_web.dart:94 Try removing the extra positional arguments.`
 
 `FirebaseCoreWeb.registerService('auth', (firebaseApp) async { ^ : Context: Found this candidate, but the arguments don't match    firebase_core_web.dart:43static void registerService(                ^^^^^^^^^^^^^^^    Failed to compile application.`
 
@@ -149,7 +151,7 @@ Before updating the SDK version, I tried the simple database call laid out in th
 
 Looking in the console, my Rules prevented access.
 
-    `{"rules": {".read": false,".write": false}`
+`{"rules": {".read": false,".write": false}`
 
 Based on reading the [Firebase security rules documentation](https://firebase.google.com/docs/database/security/rules-conditions), and a quick query to Github Copilot, I adjusted these to:
 
@@ -282,7 +284,7 @@ It was running `git status` in the installation directory that showed me the fol
 > On branch stable
 > Your branch and 'origin/stable' have diverged,
 > and have 20 and 7227 different commits each, respectively.
-> (use "git pull" if you want to integrate the remote branch with yours)Untracked files:(use "git add <file>..." to include in what will be committed) 
+> (use "git pull" if you want to integrate the remote branch with yours)Untracked files:(use "git add <file>..." to include in what will be committed)
 .pub-cache/
 ```
 
@@ -291,7 +293,7 @@ I ran `git pull`, which resulted in many merge conflicts. I tried running `git s
 Another message at the end:
 
 ```
-> Building with plugins requires symlink support. Please enable Developer Mode in your system settings. Run 
+> Building with plugins requires symlink support. Please enable Developer Mode in your system settings. Run
 > start ms-settings:developers
 > to open settings.
 > exit code 1
@@ -312,10 +314,10 @@ First I get this error:
 Deprecation means it still works, so can ignore that one. The key error (hopefully) here:
 
 ```
-> - Where: 
->   Script 'C:\Flutter\flutter\packages\flutter_tools\gradle\src\main\kotlin\dependency_version_checker.gradle.kts' line: 375 
+> - Where:
+>   Script 'C:\Flutter\flutter\packages\flutter_tools\gradle\src\main\kotlin\dependency_version_checker.gradle.kts' line: 375
 - What went wrong:  Failed to apply plugin class 'Dependency_version_checker_gradle$FlutterDependencyCheckerPlugin'.
-> Error: Your project's Kotlin version (1.6.10) is lower than Flutter's minimum supported version of 1.7.0. Please upgrade your Kotlin version. 
+> Error: Your project's Kotlin version (1.6.10) is lower than Flutter's minimum supported version of 1.7.0. Please upgrade your Kotlin version.
 > Alternatively, use the flag "--android-skip-build-dependency-validation" to bypass this check.
 ```
 
@@ -330,7 +332,7 @@ import 'package:firebase_auth/firebase_auth.dart' hide EmailAuthProvider;
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 ```
 
-I finally came across [the exact issue in the repository](https://github.com/firebase/FirebaseUI-Flutter/issues/236). One comment suggests updating the SDK environment versions, but I don't know how to find what the current versions should be. I simply updated the upper boundary to the version I saw listed on the repository, but didn't know what to switch the lower boundary to. I tried manually updating some of the firebase\_auth\_ui packages, which simply resulted in dependency conflicts and the automatic version solving erroring.
+I finally came across [the exact issue in the repository](https://github.com/firebase/FirebaseUI-Flutter/issues/236). One comment suggests updating the SDK environment versions, but I don't know how to find what the current versions should be. I simply updated the upper boundary to the version I saw listed on the repository, but didn't know what to switch the lower boundary to. I tried manually updating some of the firebase_auth_ui packages, which simply resulted in dependency conflicts and the automatic version solving erroring.
 
 I ran `flutter pub upgrade --major-versions`. Trying a build here gave me `The plugin firebase_auth requires a higher Android SDK version.`, so I needed to update to `minSdkVersion 23` in the build.gradle file. It notes that "Following this change, your app will not be available to users running Android SDKs below 23," so tough luck to those folks. I had to do this twice, admittedly, since I added the whole suggested block to the `build.gradle` file in the `/android` directory, when I needed to update the `build.gradle` file in the `/android/app/` directory.
 
@@ -353,7 +355,7 @@ I tried some YouTube videos about this on SQFlite, Hive, Shared Preferences, and
 Continuing to try to install the performance library for Firebase. Had to reinstall the `flutterfire_cli`; no idea why, but I did. Running `flutterfire configure` after installing the library fails.
 
 ```
-> FirebaseCommandException: An error occured on the Firebase CLI when attempting to run a command. 
+> FirebaseCommandException: An error occured on the Firebase CLI when attempting to run a command.
 > COMMAND: firebase projects:list --json > ERROR: Failed to list Firebase projects. See firebase-debug.log for more info.
 ```
 

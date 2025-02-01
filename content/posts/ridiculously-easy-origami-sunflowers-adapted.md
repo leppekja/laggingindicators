@@ -9,6 +9,8 @@ tags:
   - "origami"
   - "papercraft"
   - "project"
+aliases:
+  - ../../2024/02/15/ridiculously-easy-origami-sunflowers-adapted
 ---
 
 ![A pot with origami flowers](images/20240215_102140.jpg)

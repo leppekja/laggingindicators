@@ -7,6 +7,9 @@ tags:
   - "keyboard"
   - "reviews"
   - "technology"
+aliases:
+  - /posts/gove80-keyboard-review-3-months
+  - ../../2024/02/14/gove80-keyboard-review-3-months
 ---
 
 Some people are very into keyboards. They build them, they buy many of them, they review them. They know a lot about the software and hardware, and can describe the pros and cons of each component. When they look for a keyboard, they can use their prior experience to decide what features they care about, and can identify potential issues.

@@ -6,6 +6,8 @@ categories:
 tags:
   - "coding"
   - "project"
+aliases:
+  - ../../2024/09/15/play-8-red-squares
 ---
 
 I re-deployed [8 Red Squares](https://leppekja.github.io/8redsquares/), a site that allows you to play through the [8 Queens Puzzle](https://en.wikipedia.org/wiki/Eight_queens_puzzle) on different sized boards.

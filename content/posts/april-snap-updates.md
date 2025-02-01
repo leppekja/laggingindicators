@@ -1,15 +1,17 @@
 ---
 title: "April SNAP Updates"
 date: "2024-05-05"
-categories: 
+categories:
   - "food"
   - "snap"
   - "snap-benefits"
-tags: 
+tags:
   - "food-access"
   - "food-insecurity"
   - "news"
   - "poverty"
+aliases:
+  - ../../2024/05/04/april-snap-updates
 ---
 
 Note a slightly different format to topic, rather than state-based.
@@ -22,7 +24,7 @@ Note a slightly different format to topic, rather than state-based.
 
 I would be very curious to see any study performed exploring differences in program administration and case outcomes between while the waiver was in effect, and the before / after where the waiver is not in place. How has the speed of applications changed? Overpayment or underpayment rates? What do the caseworkers think about this change? I also came across [this Reddit thread on the impact of interview waivers](https://www.reddit.com/r/foodstamps/comments/198kzdi/petitioning_for_the_end_of_snap_interview/?rdt=33738), but would like to see a structured case study.
 
-* * *
+---
 
 ### What does better integration between SNAP and higher education look like?
 
@@ -38,9 +40,9 @@ This [smaller (n=33) unreplicated (as far as I know) 2019 study](https://bmcpubl
 
 [Shedding light on Food Insecurity at MSU](https://www.msuexponent.com/culture/shedding-light-on-food-insecurity-at-msu/article_20424a36-0329-11ef-a7c5-9394989ecee0.html) (Montana) gave a perspective from a student that increasing awareness, more application guidance, and decreasing the stigma involved with SNAP are good steps moving forward.
 
-[College students eligible for food assistance deterred by confusing requirements](https://ucanr.edu/News/?routeName=newsstory&postnum=59561) is a news article based off of the following research paper (n=14): [SNAP Student Rules Are Not So Snappy: Lessons Learned From a Qualitative Study of California County Agency Workers](https://www.jneb.org/article/S1499-4046\(23\)00579-1/fulltext). Some nice lessons there, even if it is a smaller study. Do note that it claims "_CalFresh_ participation remains low, with approximately 78% of those eligible not receiving benefits," based on the [Rethinking SNAP Benefits for College Students](https://younginvincibles.org/wp-content/uploads/2018/02/Rethinking_SNAP_benefits.pdf) and [Senate Bill 77 CalFresh Student Data Report](https://www.cdss.ca.gov/Portals/9/Leg/202006-SB-77-CalFresh-Student-Data-Report.pdf). I think both linked reports are very up-front about the serious limitations of these estimates, so I would be wary of just reporting out that number.
+[College students eligible for food assistance deterred by confusing requirements](https://ucanr.edu/News/?routeName=newsstory&postnum=59561) is a news article based off of the following research paper (n=14): [SNAP Student Rules Are Not So Snappy: Lessons Learned From a Qualitative Study of California County Agency Workers](<https://www.jneb.org/article/S1499-4046(23)00579-1/fulltext>). Some nice lessons there, even if it is a smaller study. Do note that it claims "_CalFresh_ participation remains low, with approximately 78% of those eligible not receiving benefits," based on the [Rethinking SNAP Benefits for College Students](https://younginvincibles.org/wp-content/uploads/2018/02/Rethinking_SNAP_benefits.pdf) and [Senate Bill 77 CalFresh Student Data Report](https://www.cdss.ca.gov/Portals/9/Leg/202006-SB-77-CalFresh-Student-Data-Report.pdf). I think both linked reports are very up-front about the serious limitations of these estimates, so I would be wary of just reporting out that number.
 
-* * *
+---
 
 ### D-SNAP alert and plans to clean data
 
@@ -48,7 +50,7 @@ This [smaller (n=33) unreplicated (as far as I know) 2019 study](https://bmcpubl
 
 I did find where [D-SNAP historical records are on the USDA website](https://www.fns.usda.gov/da/disaster-assistance), so will work on cataloging those and formatting the data. Somehow failed to identify that I needed to click the map to see older years.
 
-* * *
+---
 
 ### Puerto Rico doesn't have SNAP, but NAP
 
@@ -56,7 +58,7 @@ I did find where [D-SNAP historical records are on the USDA website](https://www
 
 I was not aware that Puerto Rico's food assistance program was more limited, and here is a [nice introduction to the NAP program](https://www.cbpp.org/research/food-assistance/introduction-to-puerto-ricos-nutrition-assistance-program) from the Center on Budget and Policy Priorities. There is actually a feasibility study for Congress from 2022, and [an updated report from 2023 is accessible from the USDA website](https://www.fns.usda.gov/snap/update-feasibility-study-implementing-usda-snap-puerto-rico). Here is [the original report in Spanish](https://fns-prod.azureedge.us/sites/default/files/resource-files/pr-snap-fasibility-final-report-spanish.pdf).
 
-* * *
+---
 
 ### How should we think about nutritional incentives for SNAP?
 
@@ -67,12 +69,12 @@ An [almost nice write up on the subject is here](https://www.wolterskluwer.com/e
 [PBS did a nice write up and filmed segment](https://www.pbs.org/newshour/show/state-laws-create-disparities-in-access-to-government-food-benefits) on the state laws limiting access to SNAP.
 
 > Most of the stuff that you get at the food banks are like very high-carbureted or starchy items. And my son's a diabetic, but we have to use it. We have no choice.
-> 
+>
 > **Betsy Cruz**
 
 Slightly unrelated point, but it shows the importance of meeting dietary requirements of food pantries for individuals. That aside, the article notes that Kansas is one of five states where you have to apply for child support when participating in SNAP.
 
-* * *
+---
 
 ### Preventing SNAP fraud is always in the news
 
@@ -82,7 +84,7 @@ A [convenience store went to court](https://masslawyersweekly.com/wp-content/blo
 
 And to combat this, the [FY 2024 SNAP Fraud Framework Implementation Grant](https://www.fns.usda.gov/grant/snap/ffig-2024) opened for state submissions this month.
 
-* * *
+---
 
 ### More and more mobile applications are making EBT payments accessible.
 
@@ -96,7 +98,7 @@ And to combat this, the [FY 2024 SNAP Fraud Framework Implementation Grant](http
 
 - [Redner’s Markets’ e-commerce sales climb nearly 7% after accepting SNAP online](https://www.grocerydive.com/spons/redners-markets-e-commerce-sales-climb-nearly-7-after-accepting-snap-onl/712801/)
 
-* * *
+---
 
 ### SNAP clickbait articles are everywhere, especially around payment distribution times.
 
@@ -104,7 +106,7 @@ The worst offenders include Marca.com, La Grada, AS, and Tododisca. These articl
 
 To combat this, and to automate this process a bit more, I am putting together a ML classifier that categorizes articles picked up by a Google Alerts RSS feed by whether they are high quality SNAP benefits related news articles or analysis or not, then feeding them to a links website. The Google Alerts RSS feed also brings in many non-SNAP related articles that just use the word “snap”, so parsing those out would help a lot.
 
-* * *
+---
 
 ### Other articles to read
 

@@ -7,6 +7,8 @@ tags:
   - "analytics"
   - "cgi"
   - "sql"
+aliases:
+  - ../../2024/02/10/friday-links
 ---
 
 \- A series of YouTube videos on how "practical effects" in movies are highlighted by directors, actors, and viewers, but actually are building blocks to extremely realistic computer generated visual effects. I didn't even realize much of what he showed was technically possible: it makes sense that performing a stunt in real life can give VFX artists valuable information about how it should look when it is computer generated, but the fact that oftentimes the stunt itself is replaced with CGI is astounding; see, for instance, the Top Gun: Maverick replacement jets.
