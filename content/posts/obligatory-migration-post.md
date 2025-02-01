@@ -19,9 +19,100 @@ Once I decided on Hugo, installation was simple and I had the quickstart up from
 
 I downloaded an export of my site from WordPress with the Export tool.
 
-I used the wordpress-export-to-markdown library. The big issue is that this library does not support footnotes, which I use frequently. The rest of the library went really smoothly.
+I used the [wordpress-export-to-markdown](https://github.com/lonekorean/wordpress-export-to-markdown) library. The big issue is that this library does not support footnotes, which I use frequently. The rest of the library went really smoothly. This took maybe a a half hour or so, including research on options.
+
+The author of the library is transitioning to v3, so I used Github Copilot (Claude 3.5 Sonnet) to write a script to extract all footnotes, convert them to markdown format, then export them all to another markdown file separated by post title. Generating a working version of this took about 15 minutes.
+
+```
+# Claude 3.5 Sonnet after a few back-and-forths
+# Load XML
+[xml]$xml = Get-Content "<your-file-website.wordpress.export.xml>"
+
+# Create namespace manager
+$nsManager = New-Object System.Xml.XmlNamespaceManager($xml.NameTable)
+$nsManager.AddNamespace("wp", "http://wordpress.org/export/1.2/")
+
+# Function to convert HTML links to markdown
+function Convert-HtmlToMarkdown {
+    param([string]$html)
+    while ($html -match '<a href="([^"]+)">([^<]+)</a>') {
+        $url = $matches[1] -replace '\\/', '/'
+        $text = $matches[2]
+        $markdown = "[$text]($url)"
+        $html = $html -replace [regex]::Escape($matches[0]), $markdown
+    }
+    return $html
+}
+
+# Create output file
+$output = "footnotes.md"
+"# Footnotes from Posts`n" | Set-Content $output
+
+# Process each post
+$posts = $xml.rss.channel.item
+foreach ($post in $posts) {
+    # Extract title properly from the title node's inner text
+    $title = $post.SelectSingleNode("title", $nsManager).InnerText
+    if ([string]::IsNullOrEmpty($title)) {
+        $title = "Untitled Post"
+    }
+
+    $postmeta = $post.SelectNodes("wp:postmeta", $nsManager) |
+                Where-Object { $_.SelectSingleNode("wp:meta_key", $nsManager).InnerText -eq "footnotes" }
+
+    if ($postmeta) {
+        $metaValue = $postmeta.SelectSingleNode("wp:meta_value", $nsManager)
+        if ($metaValue -and $metaValue.'#cdata-section') {
+            try {
+                $footnotesObj = $metaValue.'#cdata-section' | ConvertFrom-Json
+
+                # Add post title if we have valid footnotes
+                "`n## $title`n" | Add-Content $output
+
+                # Process each footnote
+                foreach ($note in $footnotesObj) {
+                    $content = Convert-HtmlToMarkdown $note.content
+                    "[^$($note.id)]: $content`n" | Add-Content $output
+                }
+            }
+            catch {
+                Write-Warning "Failed to process footnotes for post: $title"
+                Write-Warning $_.Exception.Message
+            }
+        }
+    }
+}
+```
 
 I enabled footnotes based on this post: https://lunarwatcher.github.io/til/hugo/footnotes.html, for when I do get them ported over.
+
+I also had to update the links to the footnotes in the blog post itself:
+
+```
+# Get all markdown files in posts directory
+# Claude 3.5 Sonnet
+Get-ChildItem -Path "<path-to-folder-with-posts>*.md" | ForEach-Object {
+    try {
+        # Read file content
+        $content = Get-Content $_.FullName -Raw
+
+        # Create backup
+        Copy-Item $_.FullName "$($_.FullName).bak"
+
+        # Replace footnote references using regex
+        # Matches [any_number](#uuid) and captures the uuid
+        $newContent = $content -replace '\[\d+\]\(#([a-f0-9-]+)\)', '[^$1]'
+
+        # Write back to file
+        $newContent | Set-Content $_.FullName -NoNewline
+
+        Write-Host "Updated footnotes in $($_.Name)"
+    }
+    catch {
+        Write-Error "Failed to process $($_.Name): $_"
+    }
+}
+```
 
 I then followed the Host and Deploy on GitHub guide: https://gohugo.io/hosting-and-deployment/hosting-on-github/. I did need to set the Base URL in Hugo to the name of the Github Pages site, rather than the custom domain.
 
@@ -44,8 +135,10 @@ So my list of regrets so far:
 
 - not just continuing the post structure sorted by date.
 
+This type of work is a bit irritating to me - all this to avoid a not-very-large fee to reproduce something that already exists. That said, the practice with Git, PowerShell, and website deployment is always helpful.
+
 To do:
 
 - [ ] fix images in articles based on new path
-- [ ] bring over footnotes to articles.
+- [x] bring over footnotes to articles.
 - [x] update URLS.
