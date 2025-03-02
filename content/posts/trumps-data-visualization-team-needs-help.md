@@ -35,7 +35,7 @@ I also had no idea what "Food at Home" means, or what is included in that measur
 
 The explicit decision to show the line in the foreground against the presidential terms in the background suggests a confusing relationship between who the President is and how food costs change. The two notes that stick out to me in this chart are the large spike during the Biden administration, and the decreases in prices during Obama's terms.
 
-If they wanted to create a "political" data visualization, labeling certain spikes and linking to relevant policy decisions would have been much more effective, rather than forcing the consumer ask the question of what causes which spike. The decision to use a rate from a price index, instead of just absolute costs of known items was interesting to me as well. I'm not quite sure who this visualization is meant for, nor what lesson I'm supposed to take from it. Is it "look how much prices spiked during the Biden administration", or "look how the Biden administration stopped runaway cost increases after 2022?
+If they wanted to create a "political" data visualization, labeling certain spikes and linking to relevant policy decisions would have been much more effective, rather than forcing the consumer ask the question of what causes which spike. The decision to use a rate from a price index, instead of just absolute costs of known items was interesting to me as well. I'm not quite sure who this visualization is meant for, nor what lesson I'm supposed to take from it. Is it "look how much prices spiked during the Biden administration", or "look how the Biden administration stopped runaway cost increases after 2022?"
 
 A couple minor points on the formatting as well:
 
@@ -43,7 +43,7 @@ A couple minor points on the formatting as well:
 
 - It is also amusing that they chose to leave gaps between each president's shading - who doesn't appreciate the few days each 4 years where we have no president and descend into lawlessness. Obviously no one can be held responsible for the price of food during these periods.
 
-- Why would you use tick intervals of 13 months in the x-axis? Funnily, this chart skips 2012 entirely.
+- Why use tick intervals of 13 months in the x-axis? Funnily, this chart skips 2012 entirely.
 
 - Why not just move the x-axis labels down so the gridlines and primary rate line don't all overlap?
 
@@ -75,7 +75,7 @@ Strangely, Secretary Rollins is quoted in the press release saying "the Biden ad
 
 This chart that goes out of its way to highlight which political party has control of the White House actually demonstrates that it probably isn't the presidency that matters, but exogenous events not included in the chart (specifically, the seasonal impact of the avian flu).
 
-I didn't bother to remake this one, since a very nice chart from eggprices.org already exists, with excellent attribution and appropriate stylistic decisions. This is a very simple chart that does not attempt to pass a political message and just relates prices.
+I didn't bother to remake this one, since a very nice chart from ![eggprices.org](https://eggprices.org) already exists, with excellent attribution and appropriate stylistic decisions. This is a very simple chart that does not attempt to pass a political message and just relates prices.
 
 ![Eggprices.org chart showing increasing egg prices](/posts/images/egg_prices_org.png)
 
@@ -102,7 +102,9 @@ I started with the [Average Price data (in U.S. dollars), selected items](https:
 
 ![Alternative chart showing egg prices in comparison to other food items](/posts/images/alt_eggs_labeled.png)
 
-I even left it as a screenshot. No need to get fancy. These comparison groups really highlight how dramatic the changes in egg prices has been since 2021. With more time, I would embed the link into the chart note to the [APHIS article](https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/commercial-backyard-flocks)
+I even left it as a screenshot. No need to get fancy. These comparison groups really highlight how dramatic the changes in egg prices has been since 2021; at the same time, it is easy to interpret the costs.
+
+With more time, I would embed the link into the chart note to the [APHIS article](https://www.aphis.usda.gov/livestock-poultry-disease/avian/avian-influenza/hpai-detections/commercial-backyard-flocks), and add line labels for each category at the end of the chart (the colors overlap too much). Also, the text color for bananas category is black instead of blue, so would want to adjust that.
 
 ## Overall
 
