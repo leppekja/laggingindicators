@@ -113,3 +113,7 @@ It appears very much so that the "new" plan is [largely a continuation of the Bi
 But the people at the USDA are exactly the people who should be creating high quality data visualizations explaining the causes behind increases in egg prices, and the policy levers that we can use to make food more affordable. The charts in the USDA press release did not even attempt to accomplish this.
 
 Are the charts that the USDA included in this press release really the best we can do? I don't believe so, and hope for improvement as Secretary Rollins continues on in this role.
+
+## Follow-up (3/5/2025)
+
+The Guardian posted a great data story, referencing this press release. Unsurprisingly they made their own visualizations, which are really well done. [Read it here, on The Guardian](https://www.theguardian.com/environment/2025/mar/04/egg-prices-bird-flu-corporate-profits).
