@@ -1,6 +1,10 @@
 ---
 title: "Debugging public data - county codes in Texas"
 date: "2025-05-16"
+tags:
+  - "analytics"
+  - "data"
+  - "project"
 ---
 
     If you sort a list of Texas counties by county name, the counties will not be in order by county number.

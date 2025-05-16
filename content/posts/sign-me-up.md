@@ -1,6 +1,6 @@
 ---
 title: "Sign Me Up, Please"
-date: "2025-5-18"
+date: "2025-05-18"
 tags:
   - "coding"
   - "personal-projects"
