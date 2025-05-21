@@ -7,9 +7,8 @@ tags:
   - "project"
 ---
 
-    If you sort a list of Texas counties by county name, the counties will not be in order by county number.
-
-    [Texas Center for Healthcare Statistics](https://www.dshs.texas.gov/center-health-statistics/texas-county-numbers-public-health-regions)
+> If you sort a list of Texas counties by county name, the counties will not be in order by county number.  
+> [Texas Center for Healthcare Statistics](https://www.dshs.texas.gov/center-health-statistics/texas-county-numbers-public-health-regions)
 
 Every county in the United States has a FIPS code. These standards codes are usful for mapping and joining additional datasets.
 
@@ -25,7 +24,7 @@ But each Texas state agency using its own subtly different coding system for cou
 
 The majority sort counties alphabetically by county name and use the row index number as the ID. You'll see this on the [Texas Comptroller codes](https://comptroller.texas.gov/taxes/resources/county-codes.php), and in the data file in question: the _Medicaid and CHIP Enrollment by Risk Group by County, Preliminary_ from the [Healthcare Statistics page on the Texas Health and Human Services website](https://www.hhs.texas.gov/about/records-statistics/data-statistics/healthcare-statistics) (HHS).
 
-![Logo for HHS Website](./images/TX_HHS.png)
+![Logo for HHS Website](/images/TX_HHS.png)
 
 This data file is released at hhs.texas.gov, under the Texas Health and Human Services website.
 
@@ -33,11 +32,11 @@ However, this convenient solution doesn't give an easy conversion to FIPs codes.
 
 When I found these county codes and wanted to get match them to the FIPs codes to join Census data, I [found a page](https://www.dshs.texas.gov/center-health-statistics/texas-county-numbers-public-health-regions) at the Texas Department of State Health Services (DSHS) website dshs.texas.gov that gives a helpful formula.
 
-![Logo for DSHS Website](./images/TX_HHS_DSHS.png)
+![Logo for DSHS Website](/images/TX_HHS_DSHS.png)
 
 DSHS gives a formula to translate county IDs to FIPs codes:
 
-    The county FIPS code can be calculated from the Texas county number: FIPS_code = 48000 + (county_number * 2) - 1.
+> The county FIPS code can be calculated from the Texas county number: FIPS_code = 48000 + (county_number \* 2) - 1.
 
 However, the County IDs published in the HHS Medicaid data file do not match the county numbers on the DSHS conversion table. This is because an alphabetic sort index doesn't match the order of the IDs:
 
